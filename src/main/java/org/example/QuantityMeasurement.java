@@ -3,6 +3,7 @@
 //public class QuantityMeasurement {
 //    public static class Feet {
 //        private final double value;
+//
 //        public Feet(double value) {
 //            this.value = value;
 //        }
@@ -65,15 +66,60 @@ package org.example;
 
 public class QuantityMeasurement {
 
-    public static void demonstrateLengthEquality() {
+    // Generic method to demonstrate equality comparison
+    public static void demonstrateLengthEquality(
+            double value1,
+            Length.LengthUnit unit1,
+            double value2,
+            Length.LengthUnit unit2
+    ) {
 
-        Length l1 = new Length(1.0, Length.LengthUnit.FEET);
-        Length l2 = new Length(12.0, Length.LengthUnit.INCHES);
+        Length length1 = new Length(value1, unit1);
+        Length length2 = new Length(value2, unit2);
 
-        System.out.println("Are lengths equal: " + l1.equals(l2));
+        System.out.println(value1 + " " + unit1 + " and " +value2 + " " + unit2 +" are equal: " +length1.equals(length2));
     }
 
     public static void main(String[] args) {
-        demonstrateLengthEquality();
+
+        // Feet and Inches comparison
+        demonstrateLengthEquality(
+                1.0,
+                Length.LengthUnit.FEET,
+                12.0,
+                Length.LengthUnit.INCHES
+        );
+
+        // Yard and Feet comparison
+        demonstrateLengthEquality(
+                1.0,
+                Length.LengthUnit.YARDS,
+                3.0,
+                Length.LengthUnit.FEET
+        );
+
+        // Yard and Inches comparison
+        demonstrateLengthEquality(
+                1.0,
+                Length.LengthUnit.YARDS,
+                36.0,
+                Length.LengthUnit.INCHES
+        );
+
+        // Centimeter and Inches comparison
+        demonstrateLengthEquality(
+                1.0,
+                Length.LengthUnit.CENTIMETERS,
+                0.393701,
+                Length.LengthUnit.INCHES
+        );
+
+        // Centimeter and Feet comparison
+        demonstrateLengthEquality(
+                30.48,
+                Length.LengthUnit.CENTIMETERS,
+                1.0,
+                Length.LengthUnit.FEET
+        );
     }
 }

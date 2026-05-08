@@ -134,7 +134,7 @@ public class QuantityMeasurementTest {
         assertFalse(i1.equals(i2));
     }
 
-    //Cross unit inequality (not equal)
+    //Cross unit inequality (not equal)1
     @Test
     public void testCrossUnitInequality() {
         Length f = new Length(1.0, Length.LengthUnit.FEET);
@@ -149,5 +149,133 @@ public class QuantityMeasurementTest {
         Length f = new Length(1.0, Length.LengthUnit.FEET);
 
         assertTrue(f.equals(f));
+    }
+
+    @Test
+    void testEquality_YardToYard_SameValue() {
+        assertEquals(new Length(1.0, Length.LengthUnit.YARDS),
+                new Length(1.0, Length.LengthUnit.YARDS));
+    }
+
+    // 2
+    @Test
+    void testEquality_YardToYard_DifferentValue() {
+        assertNotEquals(new Length(1.0, Length.LengthUnit.YARDS),
+                new Length(2.0, Length.LengthUnit.YARDS));
+    }
+
+    // 3
+    @Test
+    void testEquality_YardToFeet_EquivalentValue() {
+        assertEquals(new Length(1.0, Length.LengthUnit.YARDS),
+                new Length(3.0, Length.LengthUnit.FEET));
+    }
+
+    // 4
+    @Test
+    void testEquality_FeetToYard_EquivalentValue() {
+        assertEquals(new Length(3.0, Length.LengthUnit.FEET),
+                new Length(1.0, Length.LengthUnit.YARDS));
+    }
+
+    // 5
+    @Test
+    void testEquality_YardToInches_EquivalentValue() {
+        assertEquals(new Length(1.0, Length.LengthUnit.YARDS),
+                new Length(36.0, Length.LengthUnit.INCHES));
+    }
+
+    // 6
+    @Test
+    void testEquality_InchesToYard_EquivalentValue() {
+        assertEquals(new Length(36.0, Length.LengthUnit.INCHES),
+                new Length(1.0, Length.LengthUnit.YARDS));
+    }
+
+    // 7
+    @Test
+    void testEquality_YardToFeet_NonEquivalentValue() {
+        assertNotEquals(new Length(1.0, Length.LengthUnit.YARDS),
+                new Length(2.0, Length.LengthUnit.FEET));
+    }
+
+    // 8
+    @Test
+    void testEquality_centimetersToInches_EquivalentValue() {
+        assertEquals(new Length(1.0, Length.LengthUnit.CENTIMETERS),
+                new Length(0.393701, Length.LengthUnit.INCHES));
+    }
+
+    // 9
+    @Test
+    void testEquality_centimetersToFeet_NonEquivalentValue() {
+        assertNotEquals(new Length(1.0, Length.LengthUnit.CENTIMETERS),
+                new Length(1.0, Length.LengthUnit.FEET));
+    }
+
+    // 10 (transitive)
+    @Test
+    void testEquality_MultiUnit_TransitiveProperty() {
+        Length yard = new Length(1.0, Length.LengthUnit.YARDS);
+        Length feet = new Length(3.0, Length.LengthUnit.FEET);
+        Length inches = new Length(36.0, Length.LengthUnit.INCHES);
+
+        assertEquals(yard, feet);
+        assertEquals(feet, inches);
+        assertEquals(yard, inches);
+    }
+
+    // 11 (null unit)
+    @Test
+    void testEquality_YardWithNullUnit() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Length(1.0, null);
+        });
+    }
+
+    // 12 (same reference)
+    @Test
+    void testEquality_YardSameReference() {
+        Length yard = new Length(1.0, Length.LengthUnit.YARDS);
+        assertEquals(yard, yard);
+    }
+
+    // 13 (compare with null)
+    @Test
+    void testEquality_YardNullComparison() {
+        Length yard = new Length(1.0, Length.LengthUnit.YARDS);
+        assertNotEquals(yard, null);
+    }
+
+    // 14 (cm null unit)
+    @Test
+    void testEquality_CentimetersWithNullUnit() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Length(1.0, null);
+        });
+    }
+
+    // 15 (cm same reference)
+    @Test
+    void testEquality_CentimetersSameReference() {
+        Length cm = new Length(1.0, Length.LengthUnit.CENTIMETERS);
+        assertEquals(cm, cm);
+    }
+
+    // 16 (cm null comparison)
+    @Test
+    void testEquality_CentimetersNullComparison() {
+        Length cm = new Length(1.0, Length.LengthUnit.CENTIMETERS);
+        assertNotEquals(cm, null);
+    }
+
+    // 17 (complex scenario)
+    @Test
+    void testEquality_AllUnits_ComplexScenario() {
+        assertEquals(new Length(2.0, Length.LengthUnit.YARDS),
+                new Length(6.0, Length.LengthUnit.FEET));
+
+        assertEquals(new Length(6.0, Length.LengthUnit.FEET),
+                new Length(72.0, Length.LengthUnit.INCHES));
     }
 }
