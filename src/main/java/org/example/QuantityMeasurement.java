@@ -66,7 +66,7 @@ package org.example;
 
 public class QuantityMeasurement {
 
-    // Generic method to demonstrate equality comparison
+    // Generic method to demonstrate EQUALITY comparison
     public static void demonstrateLengthEquality(
             double value1,
             Length.LengthUnit unit1,
@@ -78,6 +78,47 @@ public class QuantityMeasurement {
         Length length2 = new Length(value2, unit2);
 
         System.out.println(value1 + " " + unit1 + " and " +value2 + " " + unit2 +" are equal: " +length1.equals(length2));
+    }
+
+    // Method 2
+    // Demonstrates comparison feature
+    public static void demonstrateLengthComparison(
+            double value1,
+            Length.LengthUnit unit1,
+            double value2,
+            Length.LengthUnit unit2
+    ) {
+
+        demonstrateLengthEquality(
+                value1,
+                unit1,
+                value2,
+                unit2
+        );
+    }
+    public static Length demonstrateLengthConversion(
+            double value,
+            Length.LengthUnit fromUnit,
+            Length.LengthUnit toUnit
+    ) {
+
+        Length originalLength =
+                new Length(value, fromUnit);
+        System.out.println("Converted " + value + " " + fromUnit + " to " + originalLength.convertTo(toUnit).getValue() + " " +originalLength.convertTo(toUnit).getUnit()
+        );
+
+        return originalLength.convertTo(toUnit);
+    }
+
+    // Method Overloading
+    // Conversion using existing Length object
+    public static Length demonstrateLengthConversion(
+            Length length,
+            Length.LengthUnit toUnit
+    ) {
+        System.out.println("Converted " +length +" to " +toUnit
+        );
+        return length.convertTo(toUnit);
     }
 
     public static void main(String[] args) {
@@ -121,5 +162,73 @@ public class QuantityMeasurement {
                 1.0,
                 Length.LengthUnit.FEET
         );
+
+        demonstrateLengthComparison(
+                1.0,
+                Length.LengthUnit.FEET,
+                12.0,
+                Length.LengthUnit.INCHES
+        );
+
+        demonstrateLengthComparison(
+                1.0,
+                Length.LengthUnit.YARDS,
+                3.0,
+                Length.LengthUnit.FEET
+        );
+
+        demonstrateLengthComparison(
+                1.0,
+                Length.LengthUnit.YARDS,
+                36.0,
+                Length.LengthUnit.INCHES
+        );
+
+        demonstrateLengthComparison(
+                30.48,
+                Length.LengthUnit.CENTIMETERS,
+                1.0,
+                Length.LengthUnit.FEET
+        );
+
+        // Conversion demonstrations
+
+        demonstrateLengthConversion(
+                1.0,
+                Length.LengthUnit.FEET,
+                Length.LengthUnit.INCHES
+        );
+
+        demonstrateLengthConversion(
+                24.0,
+                Length.LengthUnit.INCHES,
+                Length.LengthUnit.FEET
+        );
+
+        demonstrateLengthConversion(
+                1.0,
+                Length.LengthUnit.YARDS,
+                Length.LengthUnit.INCHES
+        );
+
+        demonstrateLengthConversion(
+                72.0,
+                Length.LengthUnit.INCHES,
+                Length.LengthUnit.YARDS
+        );
+
+        demonstrateLengthConversion(
+                2.54,
+                Length.LengthUnit.CENTIMETERS,
+                Length.LengthUnit.INCHES
+        );
+        Length converted =
+                demonstrateLengthConversion(
+                        1.0,
+                        Length.LengthUnit.FEET,
+                        Length.LengthUnit.INCHES
+                );
+
+        System.out.println(converted);
     }
 }
