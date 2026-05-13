@@ -2,8 +2,8 @@ package org.example;
 
 public class Length {
 
-    private double value;
-    private LengthUnit unit;
+    private final double value;
+    private final LengthUnit unit;
 
     // Constructor
     public Length(double value, LengthUnit unit) {
@@ -72,6 +72,30 @@ public class Length {
 
     public LengthUnit getUnit() {
         return unit;
+    }
+
+    // UC6 -> ADDITION METHOD
+    public Length add(Length otherLength) {
+
+        // validation
+        if (otherLength == null) {
+            throw new IllegalArgumentException("Length cannot be null");
+        }
+
+        // convert both lengths to inches
+        double firstLengthInInches = this.toInches();
+        double secondLengthInInches = otherLength.toInches();
+
+        // add both
+        double totalInInches =
+                firstLengthInInches + secondLengthInInches;
+
+        // convert result back to FIRST operand unit
+        double finalValue =
+                totalInInches / this.unit.getConversionFactor();
+
+        // return NEW object
+        return new Length(finalValue, this.unit);
     }
 
     //ENUM INSIDE SAME CLASS
