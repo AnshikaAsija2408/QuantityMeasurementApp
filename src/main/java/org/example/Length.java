@@ -62,6 +62,7 @@ public class Length {
     // toString() method
     @Override
     public String toString() {
+
         return value + " " + unit;
     }
 
@@ -74,29 +75,93 @@ public class Length {
         return unit;
     }
 
-    // UC6 -> ADDITION METHOD
+     //UC6 -> ADDITION METHOD
     public Length add(Length otherLength) {
 
-        // validation
-        if (otherLength == null) {
-            throw new IllegalArgumentException("Length cannot be null");
-        }
-
-        // convert both lengths to inches
-        double firstLengthInInches = this.toInches();
-        double secondLengthInInches = otherLength.toInches();
-
-        // add both
-        double totalInInches =
-                firstLengthInInches + secondLengthInInches;
-
-        // convert result back to FIRST operand unit
-        double finalValue =
-                totalInInches / this.unit.getConversionFactor();
-
-        // return NEW object
-        return new Length(finalValue, this.unit);
+         //validation
+//        if (otherLength == null) {
+//            throw new IllegalArgumentException("Length cannot be null");
+//        }
+//
+//         //convert both lengths to inches
+//        double firstLengthInInches = this.toInches();
+//        double secondLengthInInches = otherLength.toInches();
+//
+//         //add both
+//        double totalInInches =
+//                firstLengthInInches + secondLengthInInches;
+//
+//        // convert result back to FIRST operand unit
+//        double finalValue =
+//                totalInInches / this.unit.getConversionFactor();
+//
+//        // return NEW object
+        return add(otherLength, this.unit);
     }
+    public Length add(
+        Length otherLength,
+        LengthUnit targetUnit
+     ) {
+
+            if (otherLength == null) {
+                throw new IllegalArgumentException("Length cannot be null");
+            }
+
+            if (targetUnit == null) {
+                throw new IllegalArgumentException("Target unit cannot be null");
+            }
+
+            // convert both into inches
+            double thisInches =
+                    this.value * this.unit.getConversionFactor();
+
+            double otherInches =
+                    otherLength.value *
+                            otherLength.unit.getConversionFactor();
+
+            // add
+            double totalInches = thisInches + otherInches;
+
+            // convert into target unit
+            double resultValue =
+                    totalInches / targetUnit.getConversionFactor();
+
+            return new Length(resultValue, targetUnit);
+    }
+
+    // UC7 -> ADDITION WITH TARGET UNIT
+//    public Length add(
+//            Length otherLength,
+//            LengthUnit targetUnit
+//    ) {
+//
+//        // validation
+//        if (otherLength == null) {
+//            throw new IllegalArgumentException("Length cannot be null");
+//        }
+//
+//        if (targetUnit == null) {
+//            throw new IllegalArgumentException("Target unit cannot be null");
+//        }
+//
+//        // convert both lengths to inches
+//        double firstLengthInInches =
+//                this.toInches();
+//
+//        double secondLengthInInches =
+//                otherLength.toInches();
+//
+//        // add both
+//        double totalInInches =
+//                firstLengthInInches + secondLengthInInches;
+//
+//        // convert result to TARGET UNIT
+//        double finalValue =
+//                totalInInches / targetUnit.getConversionFactor();
+//
+//        // return NEW object
+//        return new Length(finalValue, targetUnit);
+//    }
 
     //ENUM INSIDE SAME CLASS
     public enum LengthUnit {
@@ -108,10 +173,13 @@ public class Length {
         private final double conversionFactor;
 
         LengthUnit(double conversionFactor) {
+
             this.conversionFactor = conversionFactor;
         }
 
+
         public double getConversionFactor() {
+
             return conversionFactor;
         }
     }
