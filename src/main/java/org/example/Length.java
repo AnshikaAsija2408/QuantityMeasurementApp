@@ -22,11 +22,10 @@ public class Length {
         this.unit = unit;
     }
 
-    // Convert to base unit (inches)
-    private double toInches() {
-        return this.value * unit.getConversionFactor();
+    // Convert to base unit
+    private double toBaseUnit() {
+        return this.unit.convertToBaseUnit(this.value);
     }
-
     // Convert current object into target unit
     public Length convertTo(LengthUnit targetUnit) {
 
@@ -36,11 +35,12 @@ public class Length {
         }
 
         // Step 1 -> convert current value to inches
-        double inchesValue = this.toInches();
+        double baseValue =
+                this.unit.convertToBaseUnit(this.value);
 
         // Step 2 -> convert inches to target unit
         double convertedValue =
-                inchesValue / targetUnit.getConversionFactor();
+                targetUnit.convertFromBaseUnit(baseValue);
 
         // Step 3 -> return NEW Length object
         return new Length(convertedValue, targetUnit);
@@ -56,7 +56,13 @@ public class Length {
 
         Length other = (Length) obj;
 
-        return Double.compare(this.toInches(), other.toInches()) == 0;
+        double firstLengthInBaseUnit =
+                this.unit.convertToBaseUnit(this.value);
+
+        double secondLengthInBaseUnit =
+                other.unit.convertToBaseUnit(other.value);
+
+        return Double.compare(firstLengthInBaseUnit, secondLengthInBaseUnit) == 0;
     }
 
     // toString() method
@@ -77,24 +83,24 @@ public class Length {
 
      //UC6 -> ADDITION METHOD
     public Length add(Length otherLength) {
-
-         //validation
-//        if (otherLength == null) {
-//            throw new IllegalArgumentException("Length cannot be null");
-//        }
 //
-//         //convert both lengths to inches
-//        double firstLengthInInches = this.toInches();
-//        double secondLengthInInches = otherLength.toInches();
-//
-//         //add both
-//        double totalInInches =
-//                firstLengthInInches + secondLengthInInches;
-//
-//        // convert result back to FIRST operand unit
-//        double finalValue =
-//                totalInInches / this.unit.getConversionFactor();
-//
+//         //validation
+////        if (otherLength == null) {
+////            throw new IllegalArgumentException("Length cannot be null");
+////        }
+////
+////         //convert both lengths to inches
+////        double firstLengthInInches = this.toInches();
+////        double secondLengthInInches = otherLength.toInches();
+////
+////         //add both
+////        double totalInInches =
+////                firstLengthInInches + secondLengthInInches;
+////
+////        // convert result back to FIRST operand unit
+////        double finalValue =
+////                totalInInches / this.unit.getConversionFactor();
+////
 //        // return NEW object
         return add(otherLength, this.unit);
     }
@@ -111,22 +117,25 @@ public class Length {
                 throw new IllegalArgumentException("Target unit cannot be null");
             }
 
-            // convert both into inches
-            double thisInches =
-                    this.value * this.unit.getConversionFactor();
 
-            double otherInches =
-                    otherLength.value *
-                            otherLength.unit.getConversionFactor();
+        // convert first length to base unit FEET
+        double firstLengthInBaseUnit =
+                this.unit.convertToBaseUnit(this.value);
 
-            // add
-            double totalInches = thisInches + otherInches;
+        // convert second length to base unit FEET
+        double secondLengthInBaseUnit =
+                otherLength.unit.convertToBaseUnit(otherLength.value);
 
-            // convert into target unit
-            double resultValue =
-                    totalInches / targetUnit.getConversionFactor();
+        // add both
+        double totalInBaseUnit =
+                firstLengthInBaseUnit + secondLengthInBaseUnit;
 
-            return new Length(resultValue, targetUnit);
+        // convert result to target unit
+        double finalValue =
+                targetUnit.convertFromBaseUnit(totalInBaseUnit);
+
+        // return NEW object
+        return new Length(finalValue, targetUnit);
     }
 
     // UC7 -> ADDITION WITH TARGET UNIT
@@ -163,24 +172,5 @@ public class Length {
 //        return new Length(finalValue, targetUnit);
 //    }
 
-    //ENUM INSIDE SAME CLASS
-    public enum LengthUnit {
-        FEET(12.0),
-        INCHES(1.0),
-        YARDS(36.0),
-        CENTIMETERS(0.393701);
 
-        private final double conversionFactor;
-
-        LengthUnit(double conversionFactor) {
-
-            this.conversionFactor = conversionFactor;
-        }
-
-
-        public double getConversionFactor() {
-
-            return conversionFactor;
-        }
-    }
 }
