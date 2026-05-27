@@ -1550,4 +1550,165 @@ public class QuantityMeasurementTest {
         assertEquals(1000.0, WeightUnit.GRAM.convertFromBaseUnit(1.0));
         assertEquals(2.20462, WeightUnit.POUND.convertFromBaseUnit(1.0), 0.001);
     }
+
+    @Test
+    void testIMeasurableInterface_LengthUnitImplementation() {
+        assertTrue(LengthUnit.FEET instanceof IMeasurable);
+        assertEquals(1.0, LengthUnit.FEET.getConversionFactor());
+    }
+
+    @Test
+    void testIMeasurableInterface_WeightUnitImplementation() {
+        assertTrue(WeightUnit.KILOGRAM instanceof IMeasurable);
+        assertEquals(1.0, WeightUnit.KILOGRAM.getConversionFactor());
+    }
+
+    @Test
+    void testGenericQuantity_LengthOperations_Equality() {
+        Quantity<LengthUnit> oneFeet = new Quantity<>(1.0, LengthUnit.FEET);
+        Quantity<LengthUnit> twelveInches = new Quantity<>(12.0, LengthUnit.INCHES);
+
+        assertEquals(oneFeet, twelveInches);
+    }
+
+    @Test
+    void testGenericQuantity_WeightOperations_Equality() {
+        Quantity<WeightUnit> oneKg = new Quantity<>(1.0, WeightUnit.KILOGRAM);
+        Quantity<WeightUnit> thousandGram = new Quantity<>(1000.0, WeightUnit.GRAM);
+
+        assertEquals(oneKg, thousandGram);
+    }
+
+    @Test
+    void testGenericQuantity_LengthOperations_Conversion() {
+        Quantity<LengthUnit> oneFeet = new Quantity<>(1.0, LengthUnit.FEET);
+
+        Quantity<LengthUnit> result = oneFeet.convertTo(LengthUnit.INCHES);
+
+        assertEquals(new Quantity<>(12.0, LengthUnit.INCHES), result);
+    }
+
+    @Test
+    void testGenericQuantity_WeightOperations_Conversion() {
+        Quantity<WeightUnit> oneKg = new Quantity<>(1.0, WeightUnit.KILOGRAM);
+
+        Quantity<WeightUnit> result = oneKg.convertTo(WeightUnit.GRAM);
+
+        assertEquals(new Quantity<>(1000.0, WeightUnit.GRAM), result);
+    }
+
+    @Test
+    void testGenericQuantity_LengthOperations_Addition() {
+        Quantity<LengthUnit> oneFeet = new Quantity<>(1.0, LengthUnit.FEET);
+        Quantity<LengthUnit> twelveInches = new Quantity<>(12.0, LengthUnit.INCHES);
+
+        Quantity<LengthUnit> result = oneFeet.add(twelveInches, LengthUnit.FEET);
+
+        assertEquals(new Quantity<>(2.0, LengthUnit.FEET), result);
+    }
+
+    @Test
+    void testGenericQuantity_WeightOperations_Addition() {
+        Quantity<WeightUnit> oneKg = new Quantity<>(1.0, WeightUnit.KILOGRAM);
+        Quantity<WeightUnit> thousandGram = new Quantity<>(1000.0, WeightUnit.GRAM);
+
+        Quantity<WeightUnit> result = oneKg.add(thousandGram, WeightUnit.KILOGRAM);
+
+        assertEquals(new Quantity<>(2.0, WeightUnit.KILOGRAM), result);
+    }
+
+    @Test
+    void testCrossCategoryPrevention_LengthVsWeight() {
+        Quantity<LengthUnit> length = new Quantity<>(1.0, LengthUnit.FEET);
+        Quantity<WeightUnit> weight = new Quantity<>(1.0, WeightUnit.KILOGRAM);
+
+        assertNotEquals(length, weight);
+    }
+
+    @Test
+    void testGenericQuantity_ConstructorValidation_NullUnit() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Quantity<LengthUnit>(1.0, null);
+        });
+    }
+
+    @Test
+    void testGenericQuantity_ConstructorValidation_NaNValue() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Quantity<>(Double.NaN, LengthUnit.FEET);
+        });
+    }
+
+    @Test
+    void testGenericQuantity_ConstructorValidation_InfiniteValue() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Quantity<>(Double.POSITIVE_INFINITY, LengthUnit.FEET);
+        });
+    }
+
+    @Test
+    void testHashCode_GenericQuantity_Consistency() {
+        Quantity<LengthUnit> oneFeet = new Quantity<>(1.0, LengthUnit.FEET);
+        Quantity<LengthUnit> twelveInches = new Quantity<>(12.0, LengthUnit.INCHES);
+
+        assertEquals(oneFeet.hashCode(), twelveInches.hashCode());
+    }
+
+    @Test
+    void testEquals_GenericQuantity_Reflexive() {
+        Quantity<LengthUnit> length = new Quantity<>(1.0, LengthUnit.FEET);
+
+        assertEquals(length, length);
+    }
+
+    @Test
+    void testEquals_GenericQuantity_Symmetric() {
+        Quantity<LengthUnit> oneFeet = new Quantity<>(1.0, LengthUnit.FEET);
+        Quantity<LengthUnit> twelveInches = new Quantity<>(12.0, LengthUnit.INCHES);
+
+        assertEquals(oneFeet, twelveInches);
+        assertEquals(twelveInches, oneFeet);
+    }
+
+    @Test
+    void testEquals_GenericQuantity_NullObject() {
+        Quantity<LengthUnit> length = new Quantity<>(1.0, LengthUnit.FEET);
+
+        assertNotEquals(null, length);
+    }
+
+    @Test
+    void testEquals_GenericQuantity_DifferentObjectType() {
+        Quantity<LengthUnit> length = new Quantity<>(1.0, LengthUnit.FEET);
+
+        assertNotEquals("1 feet", length);
+    }
+
+    @Test
+    void testAddition_DefaultTargetUnit_FirstOperandUnit() {
+        Quantity<LengthUnit> oneFeet = new Quantity<>(1.0, LengthUnit.FEET);
+        Quantity<LengthUnit> twelveInches = new Quantity<>(12.0, LengthUnit.INCHES);
+
+        Quantity<LengthUnit> result = oneFeet.add(twelveInches);
+
+        assertEquals(new Quantity<>(2.0, LengthUnit.FEET), result);
+    }
+
+    @Test
+    void testConversion_YardToFeet() {
+        Quantity<LengthUnit> oneYard = new Quantity<>(1.0, LengthUnit.YARDS);
+
+        Quantity<LengthUnit> result = oneYard.convertTo(LengthUnit.FEET);
+
+        assertEquals(new Quantity<>(3.0, LengthUnit.FEET), result);
+    }
+
+    @Test
+    void testConversion_PoundToKg() {
+        Quantity<WeightUnit> pound = new Quantity<>(2.20462, WeightUnit.POUND);
+
+        Quantity<WeightUnit> result = pound.convertTo(WeightUnit.KILOGRAM);
+
+        assertEquals(new Quantity<>(1.0, WeightUnit.KILOGRAM), result);
+    }
 }

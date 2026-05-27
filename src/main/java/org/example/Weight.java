@@ -96,11 +96,11 @@ public class Weight implements Comparable<Weight>{
         return Math.abs(thisKg - otherKg) < EPSILON;
     }
 
-    @Override
-    public int hashCode() {
-        double kgValue = unit.convertToBaseUnit(value);
-        return Double.valueOf(Math.round(kgValue / EPSILON)).hashCode();
-    }
+//    @Override
+//    public int hashCode() {
+//        double kgValue = unit.convertToBaseUnit(value);
+//        return Double.valueOf(Math.round(kgValue / EPSILON)).hashCode();
+//    }
 
     @Override
     public String toString() {
