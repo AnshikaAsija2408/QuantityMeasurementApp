@@ -245,6 +245,56 @@ public class QuantityMeasurement {
         return sumWeight;
     }
 
+    public static <U extends IMeasurable>
+    Quantity<U> demonstrateSubtraction(
+            Quantity<U> q1,
+            Quantity<U> q2
+    ) {
+
+        Quantity<U> result = q1.subtract(q2);
+
+        System.out.println(
+                q1 + " - " + q2 + " = " + result
+        );
+
+        return result;
+    }
+
+    public static <U extends IMeasurable>
+    Quantity<U> demonstrateSubtraction(
+            Quantity<U> q1,
+            Quantity<U> q2,
+            U targetUnit
+    ) {
+
+        Quantity<U> result =
+                q1.subtract(q2, targetUnit);
+
+        System.out.println(
+                q1 + " - " + q2 +
+                        " in " + targetUnit +
+                        " = " + result
+        );
+
+        return result;
+    }
+
+    public static <U extends IMeasurable>
+    double demonstrateDivision(
+            Quantity<U> q1,
+            Quantity<U> q2
+    ) {
+
+        double result = q1.divide(q2);
+
+        System.out.println(
+                q1 + " / " + q2 +
+                        " = " + result
+        );
+
+        return result;
+    }
+
     public static void main(String[] args) {
 
         // Feet and Inches comparison
@@ -458,6 +508,36 @@ public class QuantityMeasurement {
                 new Weight(1.0, WeightUnit.POUND),
                 new Weight(453.592, WeightUnit.GRAM),
                 WeightUnit.POUND
+        );
+
+        demonstrateSubtraction(
+                new Quantity<>(10.0, LengthUnit.FEET),
+                new Quantity<>(6.0, LengthUnit.INCHES)
+        );
+
+        demonstrateDivision(
+                new Quantity<>(24.0, LengthUnit.INCHES),
+                new Quantity<>(2.0, LengthUnit.FEET)
+        );
+
+        demonstrateSubtraction(
+                new Quantity<>(10.0, WeightUnit.KILOGRAM),
+                new Quantity<>(5000.0, WeightUnit.GRAM)
+        );
+
+        demonstrateDivision(
+                new Quantity<>(2000.0, WeightUnit.GRAM),
+                new Quantity<>(1.0, WeightUnit.KILOGRAM)
+        );
+
+        demonstrateSubtraction(
+                new Quantity<>(5.0, VolumeUnit.LITRE),
+                new Quantity<>(500.0, VolumeUnit.MILLILITRE)
+        );
+
+        demonstrateDivision(
+                new Quantity<>(1000.0, VolumeUnit.MILLILITRE),
+                new Quantity<>(1.0, VolumeUnit.LITRE)
         );
     }
 }
