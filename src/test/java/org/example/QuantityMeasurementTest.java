@@ -2512,4 +2512,332 @@ public class QuantityMeasurementTest {
         assertEquals(0.3333, result, 0.01);
     }
 
+    //========UC13=========
+    @Test
+    void testValidation_NullOperand_ConsistentAcrossOperations() {
+
+        Quantity<LengthUnit> q =
+                new Quantity<>(10.0, LengthUnit.FEET);
+
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> q.add(null)
+        );
+
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> q.subtract(null)
+        );
+
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> q.divide(null)
+        );
+    }
+
+    @Test
+    void testValidation_CrossCategory_ConsistentAcrossOperations() {
+
+        Quantity length =
+                new Quantity<>(10.0, LengthUnit.FEET);
+
+        Quantity weight =
+                new Quantity<>(5.0, WeightUnit.KILOGRAM);
+
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> length.add(weight)
+        );
+
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> length.subtract(weight)
+        );
+
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> length.divide(weight)
+        );
+    }
+
+    @Test
+    void testValidation_NullTargetUnit_AddSubtractReject() {
+
+        Quantity<LengthUnit> q1 =
+                new Quantity<>(10.0, LengthUnit.FEET);
+
+        Quantity<LengthUnit> q2 =
+                new Quantity<>(5.0, LengthUnit.FEET);
+
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> q1.add(q2, null)
+        );
+
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> q1.subtract(q2, null)
+        );
+    }
+
+    @Test
+    void testAdd_UC12_BehaviorPreserved() {
+
+        Quantity<LengthUnit> result =
+                new Quantity<>(1.0, LengthUnit.FEET)
+                        .add(
+                                new Quantity<>(12.0, LengthUnit.INCHES)
+                        );
+
+        assertEquals(
+                new Quantity<>(2.0, LengthUnit.FEET),
+                result
+        );
+    }
+
+    @Test
+    void testSubtract_UC12_BehaviorPreserved() {
+
+        Quantity<LengthUnit> result =
+                new Quantity<>(10.0, LengthUnit.FEET)
+                        .subtract(
+                                new Quantity<>(6.0, LengthUnit.INCHES)
+                        );
+
+        assertEquals(
+                new Quantity<>(9.5, LengthUnit.FEET),
+                result
+        );
+    }
+
+    @Test
+    void testDivide_UC12_BehaviorPreserved() {
+
+        double result =
+                new Quantity<>(24.0, LengthUnit.INCHES)
+                        .divide(
+                                new Quantity<>(2.0, LengthUnit.FEET)
+                        );
+
+        assertEquals(
+                1.0,
+                result
+        );
+    }
+
+    @Test
+    void testRounding_AddSubtract_TwoDecimalPlaces() {
+
+        Quantity<LengthUnit> result =
+                new Quantity<>(1.11, LengthUnit.FEET)
+                        .add(
+                                new Quantity<>(2.22, LengthUnit.FEET)
+                        );
+
+        assertEquals(
+                3.33,
+                result.getValue()
+        );
+    }
+
+    @Test
+    void testRounding_Divide_NoRounding() {
+
+        double result =
+                new Quantity<>(7.0, LengthUnit.FEET)
+                        .divide(
+                                new Quantity<>(2.0, LengthUnit.FEET)
+                        );
+
+        assertEquals(
+                3.5,
+                result
+        );
+    }
+
+    @Test
+    void testImplicitTargetUnit_AddSubtract() {
+
+        Quantity<LengthUnit> result =
+                new Quantity<>(12.0, LengthUnit.INCHES)
+                        .add(
+                                new Quantity<>(1.0, LengthUnit.FEET)
+                        );
+
+        assertEquals(
+                LengthUnit.INCHES,
+                result.getUnit()
+        );
+    }
+
+    @Test
+    void testExplicitTargetUnit_AddSubtract_Overrides() {
+
+        Quantity<LengthUnit> result =
+                new Quantity<>(1.0, LengthUnit.FEET)
+                        .add(
+                                new Quantity<>(12.0, LengthUnit.INCHES),
+                                LengthUnit.YARDS
+                        );
+
+        assertEquals(
+                LengthUnit.YARDS,
+                result.getUnit()
+        );
+    }
+
+    @Test
+    void testImmutability_AfterAdd_ViaCentralizedHelper() {
+
+        Quantity<LengthUnit> original =
+                new Quantity<>(1.0, LengthUnit.FEET);
+
+        original.add(
+                new Quantity<>(12.0, LengthUnit.INCHES)
+        );
+
+        assertEquals(
+                1.0,
+                original.getValue()
+        );
+    }
+
+    @Test
+    void testImmutability_AfterSubtract_ViaCentralizedHelper() {
+
+        Quantity<LengthUnit> original =
+                new Quantity<>(10.0, LengthUnit.FEET);
+
+        original.subtract(
+                new Quantity<>(5.0, LengthUnit.FEET)
+        );
+
+        assertEquals(
+                10.0,
+                original.getValue()
+        );
+    }
+
+    @Test
+    void testImmutability_AfterDivide_ViaCentralizedHelper() {
+
+        Quantity<LengthUnit> original =
+                new Quantity<>(10.0, LengthUnit.FEET);
+
+        original.divide(
+                new Quantity<>(2.0, LengthUnit.FEET)
+        );
+
+        assertEquals(
+                10.0,
+                original.getValue()
+        );
+    }
+
+    @Test
+    void testAllOperations_AcrossAllCategories() {
+
+        Quantity<LengthUnit> length =
+                new Quantity<>(10.0, LengthUnit.FEET);
+
+        Quantity<WeightUnit> weight =
+                new Quantity<>(10.0, WeightUnit.KILOGRAM);
+
+        Quantity<VolumeUnit> volume =
+                new Quantity<>(10.0, VolumeUnit.LITRE);
+
+        assertNotNull(
+                length.add(
+                        new Quantity<>(2.0, LengthUnit.FEET)
+                )
+        );
+
+        assertNotNull(
+                weight.subtract(
+                        new Quantity<>(2.0, WeightUnit.KILOGRAM)
+                )
+        );
+
+        assertEquals(
+                2.0,
+                volume.divide(
+                        new Quantity<>(5.0, VolumeUnit.LITRE)
+                )
+        );
+    }
+
+    @Test
+    void testArithmetic_Chain_Operations() {
+
+        double result =
+                new Quantity<>(10.0, LengthUnit.FEET)
+                        .add(
+                                new Quantity<>(2.0, LengthUnit.FEET)
+                        )
+                        .subtract(
+                                new Quantity<>(4.0, LengthUnit.FEET)
+                        )
+                        .divide(
+                                new Quantity<>(2.0, LengthUnit.FEET)
+                        );
+
+        assertEquals(
+                4.0,
+                result
+        );
+    }
+
+    @Test
+    void testErrorMessage_Consistency_Across_Operations() {
+
+        Quantity<LengthUnit> q =
+                new Quantity<>(10.0, LengthUnit.FEET);
+
+        Exception addException =
+                assertThrows(
+                        IllegalArgumentException.class,
+                        () -> q.add(null)
+                );
+
+        Exception subtractException =
+                assertThrows(
+                        IllegalArgumentException.class,
+                        () -> q.subtract(null)
+                );
+
+        Exception divideException =
+                assertThrows(
+                        IllegalArgumentException.class,
+                        () -> q.divide(null)
+                );
+
+        assertEquals(
+                addException.getMessage(),
+                subtractException.getMessage()
+        );
+
+        assertEquals(
+                addException.getMessage(),
+                divideException.getMessage()
+        );
+    }
+
+    @Test
+    void testRefactoring_NoBehaviorChange_LargeDataset() {
+
+        for (int i = 1; i <= 1000; i++) {
+
+            Quantity<LengthUnit> q1 =
+                    new Quantity<>(i, LengthUnit.FEET);
+
+            Quantity<LengthUnit> q2 =
+                    new Quantity<>(i, LengthUnit.FEET);
+
+            assertEquals(
+                    i * 2,
+                    q1.add(q2).getValue()
+            );
+        }
+    }
+
 }
