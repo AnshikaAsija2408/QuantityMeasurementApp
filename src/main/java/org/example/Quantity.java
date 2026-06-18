@@ -223,6 +223,9 @@ public class Quantity<U extends IMeasurable> {
             Quantity<U> other,
             ArithmeticOperation operation
     ) {
+        this.unit.validateOperationSupport(
+                operation.name()
+        );
 
         double thisBase =
                 this.unit.convertToBaseUnit(this.value);
