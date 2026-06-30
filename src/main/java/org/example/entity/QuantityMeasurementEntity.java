@@ -8,6 +8,8 @@ public class QuantityMeasurementEntity
 
     private static final long serialVersionUID = 1L;
 
+    private int id;
+
     private final QuantityDTO thisQuantity;
 
     private final QuantityDTO thatQuantity;
@@ -98,6 +100,18 @@ public class QuantityMeasurementEntity
         this.errorMessage = errorMessage;
 
         this.isError = isError;
+    }
+
+    public int getId() {
+
+        return id;
+    }
+
+    public void setId(
+            int id
+    ) {
+
+        this.id = id;
     }
 
     public QuantityDTO getThisQuantity() {
