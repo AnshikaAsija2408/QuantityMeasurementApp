@@ -1,22 +1,26 @@
-DROP TABLE IF EXISTS quantity_measurement;
+DROP TABLE IF EXISTS quantity_measurement_history;
 
-CREATE TABLE quantity_measurement (
+CREATE TABLE quantity_measurement_history (
 
     id INT AUTO_INCREMENT PRIMARY KEY,
 
-    operation VARCHAR(50) NOT NULL,
+    first_value DOUBLE,
 
-    measurement_type VARCHAR(50) NOT NULL,
+    first_unit VARCHAR(50),
 
-    quantity1_value DOUBLE,
+    first_measurement_type VARCHAR(50),
 
-    quantity1_unit VARCHAR(50),
+    second_value DOUBLE,
 
-    quantity2_value DOUBLE,
+    second_unit VARCHAR(50),
 
-    quantity2_unit VARCHAR(50),
+    second_measurement_type VARCHAR(50),
+
+    operation VARCHAR(50),
 
     result VARCHAR(100),
 
-    error_message VARCHAR(255)
+    error_message VARCHAR(255),
+
+    is_error BOOLEAN
 );

@@ -1,1 +1,1 @@
-DELETE FROM quantity_measurement;
+DELETE FROM quantity_measurement_history;

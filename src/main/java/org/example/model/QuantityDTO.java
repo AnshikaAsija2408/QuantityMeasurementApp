@@ -1,21 +1,30 @@
-package org.example.entity;
+package org.example.model;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
 
 import java.io.Serializable;
 
 public class QuantityDTO
         implements Serializable {
 
-    private static final long serialVersionUID = 1L;   //added extra
+    private static final long serialVersionUID = 1L;
 
+    @Positive(message = "Value must be greater than zero")
     private double value;
 
+    @NotBlank(message = "Unit cannot be empty")
     private String unit;
 
+    @NotBlank(message = "Measurement type cannot be empty")
     private String measurementType;
 
     private boolean hasError;
 
     private String errorMessage;
+
+    public QuantityDTO() {
+    }
 
     public QuantityDTO(
             double value,
@@ -24,11 +33,8 @@ public class QuantityDTO
     ) {
 
         this.value = value;
-
         this.unit = unit;
-
-        this.measurementType =
-                measurementType;
+        this.measurementType = measurementType;
     }
 
     public QuantityDTO(
@@ -36,9 +42,7 @@ public class QuantityDTO
     ) {
 
         this.hasError = true;
-
-        this.errorMessage =
-                errorMessage;
+        this.errorMessage = errorMessage;
     }
 
     public double getValue() {
@@ -74,8 +78,7 @@ public class QuantityDTO
             String measurementType
     ) {
 
-        this.measurementType =
-                measurementType;
+        this.measurementType = measurementType;
     }
 
     public boolean hasError() {
@@ -83,26 +86,33 @@ public class QuantityDTO
         return hasError;
     }
 
+    public void setHasError(
+            boolean hasError
+    ) {
+
+        this.hasError = hasError;
+    }
+
     public String getErrorMessage() {
 
         return errorMessage;
     }
 
-    @Override
+    public void setErrorMessage(
+            String errorMessage
+    ) {
 
+        this.errorMessage = errorMessage;
+    }
+
+    @Override
     public String toString() {
 
         if (hasError) {
 
-            return "Error : "
-
-                    + errorMessage;
+            return "Error : " + errorMessage;
         }
 
-        return value
-
-                + " "
-
-                + unit;
+        return value + " " + unit;
     }
 }

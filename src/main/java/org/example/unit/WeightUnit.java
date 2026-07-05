@@ -1,6 +1,6 @@
-package org.example;
+package org.example.unit;
 
-public enum WeightUnit implements IMeasurable{
+public enum WeightUnit implements IMeasurable {
     KILOGRAM(1.0),
     GRAM(0.001),
     POUND(0.453592);

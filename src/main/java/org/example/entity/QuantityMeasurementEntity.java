@@ -1,225 +1,176 @@
 package org.example.entity;
 
-import java.io.Serializable;
-import java.util.Objects;
+import jakarta.persistence.*;
+import org.example.model.QuantityDTO;
 
-public class QuantityMeasurementEntity
-        implements Serializable {
+@Entity
+@Table(name = "quantity_measurement_history")
+public class QuantityMeasurementEntity {
 
-    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
-    private int id;
+    @Column(name = "first_value")
+    private Double firstValue;
 
-    private final QuantityDTO thisQuantity;
+    @Column(name = "first_unit")
+    private String firstUnit;
 
-    private final QuantityDTO thatQuantity;
+    @Column(name = "first_measurement_type")
+    private String firstMeasurementType;
 
-    private final String operation;
+    @Column(name = "second_value")
+    private Double secondValue;
 
-    private final Object result;
+    @Column(name = "second_unit")
+    private String secondUnit;
 
-    private final String errorMessage;
+    @Column(name = "second_measurement_type")
+    private String secondMeasurementType;
 
-    private final boolean isError;
+    private String operation;
 
-    // For arithmetic operations
+    private String result;
 
-    public QuantityMeasurementEntity(
+    @Column(name = "error_message")
+    private String errorMessage;
 
-            QuantityDTO thisQuantity,
+    @Column(name = "is_error")
+    private boolean error;
 
-            QuantityDTO thatQuantity,
-
-            String operation,
-
-            QuantityDTO result
-    ) {
-
-        this.thisQuantity = thisQuantity;
-
-        this.thatQuantity = thatQuantity;
-
-        this.operation = operation;
-
-        this.result = result;
-
-        this.errorMessage = null;
-
-        this.isError = false;
+    public QuantityMeasurementEntity() {
     }
 
-    // For comparison and division
-
     public QuantityMeasurementEntity(
-
-            QuantityDTO thisQuantity,
-
-            QuantityDTO thatQuantity,
-
+            QuantityDTO first,
+            QuantityDTO second,
             String operation,
-
             Object result
     ) {
 
-        this.thisQuantity = thisQuantity;
+        this.firstValue = first.getValue();
+        this.firstUnit = first.getUnit();
+        this.firstMeasurementType = first.getMeasurementType();
 
-        this.thatQuantity = thatQuantity;
+        if (second != null) {
+
+            this.secondValue = second.getValue();
+            this.secondUnit = second.getUnit();
+            this.secondMeasurementType =
+                    second.getMeasurementType();
+        }
 
         this.operation = operation;
 
-        this.result = result;
+        this.result =
+                String.valueOf(result);
 
-        this.errorMessage = null;
-
-        this.isError = false;
+        this.error = false;
     }
 
-    // For errors
-
     public QuantityMeasurementEntity(
-
-            QuantityDTO thisQuantity,
-
-            QuantityDTO thatQuantity,
-
+            QuantityDTO first,
+            QuantityDTO second,
             String operation,
-
             String errorMessage,
-
-            boolean isError
+            boolean error
     ) {
 
-        this.thisQuantity = thisQuantity;
-
-        this.thatQuantity = thatQuantity;
-
-        this.operation = operation;
+        this(first, second, operation, "");
 
         this.result = null;
 
         this.errorMessage = errorMessage;
 
-        this.isError = isError;
+        this.error = error;
     }
 
-    public int getId() {
-
+    public Integer getId() {
         return id;
     }
 
-    public void setId(
-            int id
-    ) {
-
-        this.id = id;
+    public Double getFirstValue() {
+        return firstValue;
     }
 
-    public QuantityDTO getThisQuantity() {
-
-        return thisQuantity;
+    public String getFirstUnit() {
+        return firstUnit;
     }
 
-    public QuantityDTO getThatQuantity() {
+    public String getFirstMeasurementType() {
+        return firstMeasurementType;
+    }
 
-        return thatQuantity;
+    public Double getSecondValue() {
+        return secondValue;
+    }
+
+    public String getSecondUnit() {
+        return secondUnit;
+    }
+
+    public String getSecondMeasurementType() {
+        return secondMeasurementType;
     }
 
     public String getOperation() {
-
         return operation;
     }
 
-    public Object getResult() {
-
+    public String getResult() {
         return result;
     }
 
     public String getErrorMessage() {
-
         return errorMessage;
     }
 
     public boolean isError() {
-
-        return isError;
+        return error;
     }
 
-    @Override
-    public boolean equals(
-            Object obj
-    ) {
-
-        if (this == obj) {
-
-            return true;
-        }
-
-        if (obj == null
-                || getClass()
-                != obj.getClass()) {
-
-            return false;
-        }
-
-        QuantityMeasurementEntity other =
-
-                (QuantityMeasurementEntity) obj;
-
-        return Objects.equals(
-                thisQuantity,
-                other.thisQuantity
-        )
-
-                && Objects.equals(
-                thatQuantity,
-                other.thatQuantity
-        )
-
-                && Objects.equals(
-                operation,
-                other.operation
-        )
-
-                && Objects.equals(
-                result,
-                other.result
-        )
-
-                && Objects.equals(
-                errorMessage,
-                other.errorMessage
-        )
-
-                && isError
-                == other.isError;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    @Override
-    public int hashCode() {
-
-        return Objects.hash(
-
-                thisQuantity,
-
-                thatQuantity,
-
-                operation,
-
-                result,
-
-                errorMessage,
-
-                isError
-        );
+    public void setFirstValue(Double firstValue) {
+        this.firstValue = firstValue;
     }
 
-    @Override
-    public String toString() {
+    public void setFirstUnit(String firstUnit) {
+        this.firstUnit = firstUnit;
+    }
 
-        return isError
+    public void setFirstMeasurementType(String firstMeasurementType) {
+        this.firstMeasurementType = firstMeasurementType;
+    }
 
-                ? errorMessage
+    public void setSecondValue(Double secondValue) {
+        this.secondValue = secondValue;
+    }
 
-                : String.valueOf(result);
+    public void setSecondUnit(String secondUnit) {
+        this.secondUnit = secondUnit;
+    }
+
+    public void setSecondMeasurementType(String secondMeasurementType) {
+        this.secondMeasurementType = secondMeasurementType;
+    }
+
+    public void setOperation(String operation) {
+        this.operation = operation;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+
+    public void setError(boolean error) {
+        this.error = error;
     }
 }

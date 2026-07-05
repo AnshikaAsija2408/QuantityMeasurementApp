@@ -1,6 +1,6 @@
 package org.example.service;
 
-import org.example.entity.QuantityDTO;
+import org.example.model.QuantityDTO;
 
 public interface IQuantityMeasurementService {
 

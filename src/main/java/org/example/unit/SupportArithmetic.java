@@ -1,4 +1,4 @@
-package org.example;
+package org.example.unit;
 
 @FunctionalInterface
 public interface SupportArithmetic {

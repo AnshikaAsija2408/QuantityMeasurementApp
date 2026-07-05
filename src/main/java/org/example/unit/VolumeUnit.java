@@ -1,4 +1,4 @@
-package org.example;
+package org.example.unit;
 
 public enum VolumeUnit implements IMeasurable {
     LITRE(1.0),

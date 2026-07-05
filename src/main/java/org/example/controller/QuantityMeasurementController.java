@@ -1,7 +1,14 @@
 package org.example.controller;
-import org.example.entity.QuantityDTO;
-import org.example.service.IQuantityMeasurementService;
 
+import jakarta.validation.Valid;
+import org.example.model.QuantityDTO;
+import org.example.model.QuantityOperationRequest;
+import org.example.service.IQuantityMeasurementService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/quantity")
 public class QuantityMeasurementController {
 
     private final IQuantityMeasurementService service;
@@ -9,102 +16,108 @@ public class QuantityMeasurementController {
     public QuantityMeasurementController(
             IQuantityMeasurementService service
     ) {
-        if (service == null) {
-
-            throw new IllegalArgumentException(
-
-                    "Service cannot be null"
-            );
-        }
 
         this.service = service;
     }
 
-    public boolean performCompare(
-            QuantityDTO quantity1,
-            QuantityDTO quantity2
+    @PostMapping("/compare")
+    public ResponseEntity<Boolean> compare(
+
+            @Valid
+            @RequestBody
+            QuantityOperationRequest request
     ) {
 
-        return service.compare(
-                quantity1,
-                quantity2
+        return ResponseEntity.ok(
+
+                service.compare(
+
+                        request.getQuantity1(),
+
+                        request.getQuantity2()
+                )
         );
     }
 
-    public QuantityDTO performConvert(
-            QuantityDTO quantity,
-            QuantityDTO targetUnit
+    @PostMapping("/convert")
+    public ResponseEntity<QuantityDTO> convert(
+
+            @Valid
+            @RequestBody
+            QuantityOperationRequest request
     ) {
 
-        return service.convert(
-                quantity,
-                targetUnit
+        return ResponseEntity.ok(
+
+                service.convert(
+
+                        request.getQuantity1(),
+
+                        request.getTargetUnit()
+                )
         );
     }
 
-    public QuantityDTO performAdd(
-            QuantityDTO quantity1,
-            QuantityDTO quantity2
+    @PostMapping("/add")
+    public ResponseEntity<QuantityDTO> add(
+
+            @Valid
+            @RequestBody
+            QuantityOperationRequest request
     ) {
 
-        return service.add(
-                quantity1,
-                quantity2
+        return ResponseEntity.ok(
+
+                service.add(
+
+                        request.getQuantity1(),
+
+                        request.getQuantity2()
+                )
         );
     }
 
-    public QuantityDTO performAdd(
-            QuantityDTO quantity1,
-            QuantityDTO quantity2,
-            QuantityDTO targetUnit
+    @PostMapping("/subtract")
+    public ResponseEntity<QuantityDTO> subtract(
+
+            @Valid
+            @RequestBody
+            QuantityOperationRequest request
     ) {
 
-        return service.add(
-                quantity1,
-                quantity2,
-                targetUnit
+        return ResponseEntity.ok(
+
+                service.subtract(
+
+                        request.getQuantity1(),
+
+                        request.getQuantity2()
+                )
         );
     }
 
-    public QuantityDTO performSubtract(
-            QuantityDTO quantity1,
-            QuantityDTO quantity2
+    @PostMapping("/divide")
+    public ResponseEntity<Double> divide(
+
+            @Valid
+            @RequestBody
+            QuantityOperationRequest request
     ) {
 
-        return service.subtract(
-                quantity1,
-                quantity2
+        return ResponseEntity.ok(
+
+                service.divide(
+
+                        request.getQuantity1(),
+
+                        request.getQuantity2()
+                )
         );
     }
 
-    public QuantityDTO performSubtract(
-            QuantityDTO quantity1,
-            QuantityDTO quantity2,
-            QuantityDTO targetUnit
-    ) {
+    @GetMapping
+    public String home() {
 
-        return service.subtract(
-                quantity1,
-                quantity2,
-                targetUnit
-        );
-    }
-
-    public double performDivide(
-            QuantityDTO quantity1,
-            QuantityDTO quantity2
-    ) {
-
-        return service.divide(
-                quantity1,
-                quantity2
-        );
-    }
-
-    public void displayResult(
-            Object result
-    ) {
-
-        System.out.println(result);
+        return "Quantity Measurement API is running...";
     }
 }

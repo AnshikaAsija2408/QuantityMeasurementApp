@@ -1,13 +1,21 @@
 package org.example.service;
 
-import org.example.*;
-import org.example.entity.QuantityDTO;
+import org.example.quantity.Quantity;
+
+import org.example.unit.IMeasurable;
+import org.example.unit.LengthUnit;
+import org.example.unit.WeightUnit;
+import org.example.unit.VolumeUnit;
+import org.example.unit.TemperatureUnit;
+import org.example.model.QuantityDTO;
+import org.springframework.stereotype.Service;
 import org.example.entity.QuantityMeasurementEntity;
 import org.example.exception.QuantityMeasurementException;
-import org.example.repository.IQuantityMeasurementRepository;
+import org.example.repository.QuantityMeasurementRepository;
 
 import java.util.logging.Logger;
 
+@Service
 public class QuantityMeasurementServiceImpl
         implements IQuantityMeasurementService {
 
@@ -16,19 +24,11 @@ public class QuantityMeasurementServiceImpl
                     QuantityMeasurementServiceImpl.class.getName()
             );
 
-    private final IQuantityMeasurementRepository repository;
+    private final QuantityMeasurementRepository repository;
 
     public QuantityMeasurementServiceImpl(
-            IQuantityMeasurementRepository repository
+            QuantityMeasurementRepository repository
     ) {
-
-        if (repository == null) {
-
-            throw new IllegalArgumentException(
-                    "Repository cannot be null"
-            );
-        }
-
         this.repository = repository;
 
         logger.info(

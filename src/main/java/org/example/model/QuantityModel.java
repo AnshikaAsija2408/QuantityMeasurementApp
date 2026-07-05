@@ -1,6 +1,6 @@
-package org.example.entity;
+package org.example.model;
 
-import org.example.IMeasurable;
+import org.example.unit.IMeasurable;
 
 public class QuantityModel
         <U extends IMeasurable> {
