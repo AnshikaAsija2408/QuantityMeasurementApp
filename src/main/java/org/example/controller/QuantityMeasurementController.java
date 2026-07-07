@@ -1,5 +1,7 @@
 package org.example.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.example.model.QuantityDTO;
 import org.example.model.QuantityOperationRequest;
@@ -9,6 +11,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/quantity")
+@Tag(
+        name = "Quantity Measurement API",
+        description = "REST APIs for Quantity Measurement Operations"
+)
 public class QuantityMeasurementController {
 
     private final IQuantityMeasurementService service;
@@ -16,10 +22,10 @@ public class QuantityMeasurementController {
     public QuantityMeasurementController(
             IQuantityMeasurementService service
     ) {
-
         this.service = service;
     }
 
+    @Operation(summary = "Compare two quantities")
     @PostMapping("/compare")
     public ResponseEntity<Boolean> compare(
 
@@ -39,6 +45,7 @@ public class QuantityMeasurementController {
         );
     }
 
+    @Operation(summary = "Convert a quantity to another unit")
     @PostMapping("/convert")
     public ResponseEntity<QuantityDTO> convert(
 
@@ -58,6 +65,7 @@ public class QuantityMeasurementController {
         );
     }
 
+    @Operation(summary = "Add two quantities")
     @PostMapping("/add")
     public ResponseEntity<QuantityDTO> add(
 
@@ -77,6 +85,7 @@ public class QuantityMeasurementController {
         );
     }
 
+    @Operation(summary = "Subtract two quantities")
     @PostMapping("/subtract")
     public ResponseEntity<QuantityDTO> subtract(
 
@@ -96,6 +105,7 @@ public class QuantityMeasurementController {
         );
     }
 
+    @Operation(summary = "Divide two quantities")
     @PostMapping("/divide")
     public ResponseEntity<Double> divide(
 
@@ -115,6 +125,7 @@ public class QuantityMeasurementController {
         );
     }
 
+    @Operation(summary = "Check whether the API is running")
     @GetMapping
     public String home() {
 
