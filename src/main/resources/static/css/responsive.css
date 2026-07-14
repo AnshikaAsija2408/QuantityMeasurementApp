@@ -1,0 +1,228 @@
+/* ==========================================
+           LARGE TABLET
+========================================== */
+
+@media screen and (max-width: 992px){
+
+    .container{
+
+        width:95%;
+
+    }
+
+    .measurement-types{
+
+        gap:15px;
+
+    }
+
+    .type-btn{
+
+        width:160px;
+
+        height:130px;
+
+    }
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* ==========================================
+             TABLET
+========================================== */
+
+@media screen and (max-width:768px){
+
+    header{
+
+        padding:18px;
+
+    }
+
+    .logo{
+
+        flex-direction:column;
+
+        gap:10px;
+
+    }
+
+    .logo h1{
+
+        font-size:28px;
+
+        text-align:center;
+
+    }
+
+    .measurement-types{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .type-btn{
+
+        width:100%;
+
+        max-width:350px;
+
+        height:120px;
+
+    }
+
+    .operations{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .operation-btn{
+
+        width:100%;
+
+        max-width:350px;
+
+    }
+
+    .button-group{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .button-group button{
+
+        width:100%;
+
+        max-width:350px;
+
+    }
+
+}
+
+
+/* ==========================================
+             MOBILE
+========================================== */
+
+@media screen and (max-width:576px){
+
+    .container{
+
+        width:96%;
+
+    }
+
+    .card{
+
+        padding:20px;
+
+    }
+
+    .logo h1{
+
+        font-size:24px;
+
+    }
+
+    .card h2{
+
+        font-size:22px;
+
+    }
+
+    .type-btn{
+
+        font-size:16px;
+
+        height:110px;
+
+    }
+
+    .type-btn i{
+
+        font-size:32px;
+
+    }
+
+    .operation-btn{
+
+        font-size:15px;
+
+    }
+
+    .input-group input,
+
+    .input-group select{
+
+        font-size:14px;
+
+    }
+
+    #resultBox{
+
+        font-size:18px;
+
+    }
+
+}
+
+
+/* ==========================================
+          VERY SMALL DEVICES
+========================================== */
+
+@media screen and (max-width:400px){
+
+    .logo h1{
+
+        font-size:20px;
+
+    }
+
+    .card{
+
+        padding:15px;
+
+    }
+
+    .type-btn{
+
+        height:95px;
+
+    }
+
+    .type-btn i{
+
+        font-size:28px;
+
+    }
+
+    .button-group button{
+
+        font-size:14px;
+
+        padding:12px;
+
+    }
+
+    footer{
+
+        font-size:13px;
+
+    }
+
+}

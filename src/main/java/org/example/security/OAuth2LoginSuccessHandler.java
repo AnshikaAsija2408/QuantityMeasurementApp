@@ -9,6 +9,8 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 @Component
 public class OAuth2LoginSuccessHandler implements AuthenticationSuccessHandler {
@@ -29,25 +31,12 @@ public class OAuth2LoginSuccessHandler implements AuthenticationSuccessHandler {
                 (DefaultOAuth2User) authentication.getPrincipal();
 
         String email = user.getAttribute("email");
-        String name = user.getAttribute("name");
-        String picture = user.getAttribute("picture");
 
         String token = jwtUtil.generateToken(email);
 
-        response.setContentType("application/json");
-
-        response.getWriter().write("""
-                {
-                    "token":"%s",
-                    "name":"%s",
-                    "email":"%s",
-                    "picture":"%s"
-                }
-                """.formatted(
-                token,
-                name,
-                email,
-                picture
-        ));
+        response.sendRedirect(
+                "/index.html?token=" +
+                        URLEncoder.encode(token, StandardCharsets.UTF_8)
+        );
     }
 }

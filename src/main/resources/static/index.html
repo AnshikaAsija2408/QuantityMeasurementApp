@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Quantity Measurement System</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/responsive.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-ruler-combined"></i>
+
+        <h1>Quantity Measurement</h1>
+
+    </div>
+
+    <div class="header-right">
+
+        <div class="clock-frame">
+
+            <iframe
+                    src="iframe/clock.html"
+                    frameborder="0">
+            </iframe>
+
+        </div>
+
+        <button id="logoutBtn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <!-- ============================ -->
+
+    <!-- Measurement Type -->
+
+    <!-- ============================ -->
+
+    <section class="card">
+
+        <h2>Select Measurement Type</h2>
+
+        <div class="measurement-types">
+
+            <button class="type-btn active"
+                    data-type="LENGTH">
+
+                <i class="fa-solid fa-ruler"></i>
+
+                <span>Length</span>
+
+            </button>
+
+            <button class="type-btn"
+                    data-type="WEIGHT">
+
+                <i class="fa-solid fa-weight-scale"></i>
+
+                <span>Weight</span>
+
+            </button>
+
+            <button class="type-btn"
+                    data-type="TEMPERATURE">
+
+                <i class="fa-solid fa-temperature-half"></i>
+
+                <span>Temperature</span>
+
+            </button>
+
+            <button class="type-btn"
+                    data-type="VOLUME">
+
+                <i class="fa-solid fa-glass-water"></i>
+
+                <span>Volume</span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ============================ -->
+
+    <!-- Operation -->
+
+    <!-- ============================ -->
+
+    <section class="card">
+
+        <h2>Select Operation</h2>
+
+        <div class="operations">
+
+            <button class="operation-btn active"
+                    data-operation="compare">
+
+                Compare
+
+            </button>
+
+            <button class="operation-btn"
+                    data-operation="convert">
+
+                Convert
+
+            </button>
+
+            <button class="operation-btn"
+                    data-operation="add">
+
+                Add
+
+            </button>
+
+            <button class="operation-btn"
+                    data-operation="subtract">
+
+                Subtract
+
+            </button>
+
+            <button class="operation-btn"
+                    data-operation="divide">
+
+                Divide
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ============================ -->
+
+    <!-- Form -->
+
+    <!-- ============================ -->
+
+    <section class="card">
+
+        <h2>Enter Quantity Details</h2>
+
+        <form id="quantityForm">
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label>
+
+                        Value 1
+
+                    </label>
+
+                    <input
+                            type="number"
+                            id="value1"
+                            step="any"
+                            placeholder="Enter Value">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+
+                        Unit
+
+                    </label>
+
+                    <select id="unit1">
+
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+
+                        Value 2
+
+                    </label>
+
+                    <input
+                            type="number"
+                            id="value2"
+                            step="any"
+                            placeholder="Enter Value">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+
+                        Unit
+
+                    </label>
+
+                    <select id="unit2">
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!-- Target Unit -->
+
+            <div
+                    class="input-group"
+                    id="targetUnitContainer">
+
+                <label>
+
+                    Target Unit
+
+                </label>
+
+                <select id="targetUnit">
+
+                </select>
+
+            </div>
+
+            <div class="button-group">
+
+                <button
+                        type="submit"
+                        id="calculateBtn">
+
+                    Calculate
+
+                </button>
+
+                <button
+                        type="reset">
+
+                    Reset
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+    <!-- ============================ -->
+
+    <!-- Result -->
+
+    <!-- ============================ -->
+
+    <section class="card">
+
+        <h2>Result</h2>
+
+        <div id="resultBox">
+
+            Waiting for calculation...
+
+        </div>
+
+    </section>
+
+    <!-- ============================ -->
+
+    <!-- Calculation History -->
+
+    <!-- ============================ -->
+
+    <section class="card">
+
+        <h2>Calculation History</h2>
+
+        <iframe
+
+                src="iframe/history.html"
+
+                class="history-frame">
+
+        </iframe>
+
+    </section>
+
+    <section class="card">
+
+        <h2>User Manual</h2>
+
+        <iframe
+
+                src="iframe/user-manual.html"
+
+                class="manual-frame">
+
+        </iframe>
+
+    </section>
+
+</main>
+
+<footer>
+
+    Developed using Spring Boot + HTML + CSS + JavaScript
+
+</footer>
+
+<script src="js/api.js"></script>
+
+<script src="js/validation.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
