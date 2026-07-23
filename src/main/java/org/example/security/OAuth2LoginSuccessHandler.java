@@ -15,6 +15,8 @@ import java.nio.charset.StandardCharsets;
 @Component
 public class OAuth2LoginSuccessHandler implements AuthenticationSuccessHandler {
 
+    private static final String FRONTEND_URL = "http://localhost:5173";
+
     private final JwtUtil jwtUtil;
 
     public OAuth2LoginSuccessHandler(JwtUtil jwtUtil) {
@@ -34,8 +36,10 @@ public class OAuth2LoginSuccessHandler implements AuthenticationSuccessHandler {
 
         String token = jwtUtil.generateToken(email);
 
+        // NEW: redirect to "/" (the Dashboard) instead of "/index.html".
+        // DashboardPage picks up the token and auto-navigates to "/app".
         response.sendRedirect(
-                "/index.html?token=" +
+                FRONTEND_URL + "/?token=" +
                         URLEncoder.encode(token, StandardCharsets.UTF_8)
         );
     }

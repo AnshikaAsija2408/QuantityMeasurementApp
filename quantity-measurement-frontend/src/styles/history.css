@@ -1,0 +1,14 @@
+/* Scoped styles for the History panel — ported from the
+   embedded <style> block in the old iframe/history.html.
+   (.history-card and pre are already defined globally in style.css) */
+
+.history-frame {
+    overflow-y: auto;
+    background: #ffffff;
+    padding: 10px;
+}
+
+.history-widget .empty {
+    color: gray;
+    text-align: center;
+}

@@ -1,0 +1,180 @@
+.dashboard-page {
+    min-height: 100vh;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ============ LEFT BRAND PANEL ============ */
+
+.dashboard-panel {
+    flex: 1;
+    background: linear-gradient(135deg, #1565C0 0%, #0d47a1 50%, #002171 100%);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 50px;
+}
+
+.dashboard-panel-content {
+    max-width: 420px;
+}
+
+.dashboard-logo {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.dashboard-logo i {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.dashboard-panel-content h1 {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.dashboard-panel-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #dce8ff;
+    margin-bottom: 25px;
+}
+
+.dashboard-feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dashboard-feature-list li {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #eef5ff;
+}
+
+.dashboard-feature-list i {
+    color: #4ade80;
+}
+
+/* ============ RIGHT SIGN-IN CARD ============ */
+
+.dashboard-signin {
+    flex: 1;
+    background: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.signin-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 50px 40px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    animation: signinCardEnter 0.5s ease;
+}
+
+@keyframes signinCardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signin-logo {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: #eef5ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-logo i {
+    font-size: 30px;
+    color: #1565C0;
+}
+
+.signin-card h2 {
+    color: #1565C0;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.signin-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.google-signin-btn {
+    width: 100%;
+    background: #ffffff;
+    border: 2px solid #dcecff;
+    color: #333;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: .3s;
+}
+
+.google-signin-btn i {
+    color: #ea4335;
+    font-size: 18px;
+}
+
+.google-signin-btn:hover {
+    background: #eef5ff;
+    border-color: #1565C0;
+    transform: translateY(-2px);
+}
+
+.signin-footer-text {
+    margin-top: 25px;
+    color: #999;
+    font-size: 12px;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media screen and (max-width: 900px) {
+    .dashboard-page {
+        flex-direction: column;
+    }
+
+    .dashboard-panel {
+        padding: 40px 30px;
+    }
+
+    .dashboard-panel-content p,
+    .dashboard-feature-list {
+        display: none;
+    }
+}
