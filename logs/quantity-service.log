@@ -1,0 +1,366 @@
+2026-07-28T00:18:19.716+05:30  INFO 22928 --- [quantity-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T00:18:19.732+05:30  INFO 22928 --- [quantity-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T00:18:19.749+05:30  INFO 22928 --- [quantity-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:18:19.768+05:30  WARN 22928 --- [quantity-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T00:18:19.768+05:30  INFO 22928 --- [quantity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T00:18:19.771+05:30  INFO 22928 --- [quantity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T00:18:23.148+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : Starting QuantityServiceApplication using Java 23.0.1 with PID 24408 (C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1)\quantity-service\target\classes started by anshi in C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1))
+2026-07-28T00:18:23.148+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T00:18:23.228+05:30  INFO 24408 --- [quantity-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T00:18:23.232+05:30  INFO 24408 --- [quantity-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T00:18:24.565+05:30  INFO 24408 --- [quantity-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T00:18:24.630+05:30  INFO 24408 --- [quantity-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interface.
+2026-07-28T00:18:24.866+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=77d0b4ad-0db1-3b94-bb60-34787841fd71
+2026-07-28T00:18:25.594+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-07-28T00:18:25.634+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T00:18:25.636+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T00:18:25.701+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T00:18:25.701+05:30  INFO 24408 --- [quantity-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2469 ms
+2026-07-28T00:18:26.210+05:30  WARN 24408 --- [quantity-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T00:18:26.349+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T00:18:26.428+05:30  INFO 24408 --- [quantity-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T00:18:26.463+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T00:18:26.809+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T00:18:26.852+05:30  INFO 24408 --- [quantity-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T00:18:27.016+05:30  INFO 24408 --- [quantity-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:quantitydb user=SA
+2026-07-28T00:18:27.016+05:30  INFO 24408 --- [quantity-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T00:18:27.047+05:30  WARN 24408 --- [quantity-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T00:18:27.063+05:30  INFO 24408 --- [quantity-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T00:18:27.843+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T00:18:27.906+05:30  INFO 24408 --- [quantity-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:18:27.958+05:30  WARN 24408 --- [quantity-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-07-28T00:18:28.209+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.e.q.s.QuantityMeasurementServiceImpl   : QuantityMeasurementService initialized.
+2026-07-28T00:18:28.711+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T00:18:28.754+05:30  WARN 24408 --- [quantity-service] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7c7c5276-6836-4842-a308-05b98412b9c0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-28T00:18:28.763+05:30  INFO 24408 --- [quantity-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-28T00:18:29.429+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:quantitydb'
+2026-07-28T00:18:30.494+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T00:18:30.683+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-07-28T00:18:31.706+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T00:18:31.723+05:30  INFO 24408 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : Started QuantityServiceApplication in 10.146 seconds (process running for 10.923)
+2026-07-28T00:21:37.312+05:30  INFO 24408 --- [quantity-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T00:21:37.320+05:30  INFO 24408 --- [quantity-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T00:21:37.331+05:30  INFO 24408 --- [quantity-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:21:37.335+05:30  WARN 24408 --- [quantity-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T00:21:37.335+05:30  INFO 24408 --- [quantity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T00:21:37.335+05:30  INFO 24408 --- [quantity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T00:21:40.374+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : Starting QuantityServiceApplication using Java 23.0.1 with PID 31356 (C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1)\quantity-service\target\classes started by anshi in C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1))
+2026-07-28T00:21:40.374+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T00:21:40.448+05:30  INFO 31356 --- [quantity-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T00:21:40.448+05:30  INFO 31356 --- [quantity-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T00:21:41.676+05:30  INFO 31356 --- [quantity-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T00:21:41.741+05:30  INFO 31356 --- [quantity-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interface.
+2026-07-28T00:21:41.976+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=77d0b4ad-0db1-3b94-bb60-34787841fd71
+2026-07-28T00:21:42.621+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-07-28T00:21:42.645+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T00:21:42.645+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T00:21:42.724+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T00:21:42.724+05:30  INFO 31356 --- [quantity-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2276 ms
+2026-07-28T00:21:43.218+05:30  WARN 31356 --- [quantity-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T00:21:43.353+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T00:21:43.426+05:30  INFO 31356 --- [quantity-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T00:21:43.465+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T00:21:43.734+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T00:21:43.750+05:30  INFO 31356 --- [quantity-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T00:21:43.897+05:30  INFO 31356 --- [quantity-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:quantitydb user=SA
+2026-07-28T00:21:43.897+05:30  INFO 31356 --- [quantity-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T00:21:43.911+05:30  WARN 31356 --- [quantity-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T00:21:43.935+05:30  INFO 31356 --- [quantity-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T00:21:44.622+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T00:21:44.686+05:30  INFO 31356 --- [quantity-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:21:44.756+05:30  WARN 31356 --- [quantity-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-07-28T00:21:45.058+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.e.q.s.QuantityMeasurementServiceImpl   : QuantityMeasurementService initialized.
+2026-07-28T00:21:45.506+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T00:21:45.538+05:30  WARN 31356 --- [quantity-service] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2a147fd9-551c-4c82-b872-fe00fb130d0d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-28T00:21:45.554+05:30  INFO 31356 --- [quantity-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-28T00:21:45.966+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:quantitydb'
+2026-07-28T00:21:47.026+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T00:21:47.110+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-07-28T00:21:48.125+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T00:21:48.141+05:30  INFO 31356 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : Started QuantityServiceApplication in 9.311 seconds (process running for 10.029)
+2026-07-28T00:33:39.165+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28T00:33:39.167+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-28T00:33:39.169+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-07-28T00:33:39.258+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-2] o.e.q.s.FeignAuthenticationFilter        : ========== FeignAuthenticationFilter ==========
+2026-07-28T00:33:39.259+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-2] o.e.q.s.FeignAuthenticationFilter        : Request URI : /api/quantity/add
+2026-07-28T00:33:39.260+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-2] o.e.q.s.FeignAuthenticationFilter        : Authorization Header : Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbnNoaWthYXNpamFAZ21haWwuY29tIiwiaWF0IjoxNzg1MTc5MDA5LCJleHAiOjE3ODUyNjU0MDl9.OBcqzx01dVU7YfyXDGIaHzId30O7cmpYpMayzgkYl9A
+2026-07-28T00:33:39.260+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-2] o.e.q.s.FeignAuthenticationFilter        : Calling OAuth Service for token validation...
+2026-07-28T00:33:39.490+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-2] o.e.q.s.FeignAuthenticationFilter        : Validation Response : org.example.quantityservice.dto.ValidationResponse@2a4f74c6
+2026-07-28T00:33:39.491+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-2] o.e.q.s.FeignAuthenticationFilter        : Authentication SUCCESS for : anshikaasija@gmail.com
+2026-07-28T00:33:39.543+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-2] o.e.q.s.QuantityMeasurementServiceImpl   : Performing ADD operation.
+2026-07-28T00:33:58.106+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-5] o.e.q.s.FeignAuthenticationFilter        : ========== FeignAuthenticationFilter ==========
+2026-07-28T00:33:58.106+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-5] o.e.q.s.FeignAuthenticationFilter        : Request URI : /api/quantity/convert
+2026-07-28T00:33:58.106+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-5] o.e.q.s.FeignAuthenticationFilter        : Authorization Header : Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbnNoaWthYXNpamFAZ21haWwuY29tIiwiaWF0IjoxNzg1MTc5MDA5LCJleHAiOjE3ODUyNjU0MDl9.OBcqzx01dVU7YfyXDGIaHzId30O7cmpYpMayzgkYl9A
+2026-07-28T00:33:58.106+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-5] o.e.q.s.FeignAuthenticationFilter        : Calling OAuth Service for token validation...
+2026-07-28T00:33:58.127+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-5] o.e.q.s.FeignAuthenticationFilter        : Validation Response : org.example.quantityservice.dto.ValidationResponse@5cb765e1
+2026-07-28T00:33:58.127+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-5] o.e.q.s.FeignAuthenticationFilter        : Authentication SUCCESS for : anshikaasija@gmail.com
+2026-07-28T00:33:58.127+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-5] o.e.q.s.QuantityMeasurementServiceImpl   : Performing CONVERT operation.
+2026-07-28T00:38:26.926+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-7] o.e.q.s.FeignAuthenticationFilter        : ========== FeignAuthenticationFilter ==========
+2026-07-28T00:38:26.926+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-7] o.e.q.s.FeignAuthenticationFilter        : Request URI : /api/quantity/add
+2026-07-28T00:38:26.927+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-7] o.e.q.s.FeignAuthenticationFilter        : Authorization Header : Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbnNoaWthMDI4OC5iZTIzQGNoaXRrYXJhLmVkdS5pbiIsImlhdCI6MTc4NTEzNTg3NSwiZXhwIjoxNzg1MjIyMjc1fQ.N3BgtAlVyGf3YJ3CltkI-duMxul9r-6Ay2KtWufCBKo
+2026-07-28T00:38:26.927+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-7] o.e.q.s.FeignAuthenticationFilter        : Calling OAuth Service for token validation...
+2026-07-28T00:38:26.945+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-7] o.e.q.s.FeignAuthenticationFilter        : Validation Response : org.example.quantityservice.dto.ValidationResponse@606db48
+2026-07-28T00:38:26.945+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-7] o.e.q.s.FeignAuthenticationFilter        : Authentication SUCCESS for : anshika0288.be23@chitkara.edu.in
+2026-07-28T00:38:26.948+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-7] o.e.q.s.QuantityMeasurementServiceImpl   : Performing ADD operation.
+2026-07-28T03:45:08.668+05:30  WARN 31356 --- [quantity-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h59m53s434ms897µs700ns).
+2026-07-28T09:27:08.003+05:30  WARN 31356 --- [quantity-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h42m19s959ms108µs500ns).
+2026-07-28T09:30:25.439+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-9] o.e.q.s.FeignAuthenticationFilter        : ========== FeignAuthenticationFilter ==========
+2026-07-28T09:30:25.440+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-9] o.e.q.s.FeignAuthenticationFilter        : Request URI : /api/quantity
+2026-07-28T09:30:25.441+05:30  INFO 31356 --- [quantity-service] [http-nio-8081-exec-9] o.e.q.s.FeignAuthenticationFilter        : Authorization Header : null
+2026-07-28T09:30:25.441+05:30  WARN 31356 --- [quantity-service] [http-nio-8081-exec-9] o.e.q.s.FeignAuthenticationFilter        : Authorization header missing or invalid.
+2026-07-28T09:47:15.612+05:30  WARN 31356 --- [quantity-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m37s375ms562µs900ns).
+2026-07-28T09:48:43.551+05:30  INFO 31356 --- [quantity-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T09:48:43.575+05:30  INFO 31356 --- [quantity-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T09:48:43.612+05:30  INFO 31356 --- [quantity-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T09:48:43.642+05:30  WARN 31356 --- [quantity-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T09:48:43.643+05:30  INFO 31356 --- [quantity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T09:48:43.647+05:30  INFO 31356 --- [quantity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T15:24:15.582+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : Starting QuantityServiceApplication using Java 21.0.11 with PID 21856 (C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp\quantity-service\target\classes started by anshi in C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp)
+2026-07-28T15:24:15.584+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T15:24:15.637+05:30  INFO 21856 --- [quantity-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T15:24:15.638+05:30  INFO 21856 --- [quantity-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T15:24:17.290+05:30  INFO 21856 --- [quantity-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T15:24:17.376+05:30  INFO 21856 --- [quantity-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 1 JPA repository interface.
+2026-07-28T15:24:17.663+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=77d0b4ad-0db1-3b94-bb60-34787841fd71
+2026-07-28T15:24:18.484+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-07-28T15:24:18.503+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T15:24:18.504+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T15:24:18.564+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T15:24:18.564+05:30  INFO 21856 --- [quantity-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2926 ms
+2026-07-28T15:24:19.140+05:30  WARN 21856 --- [quantity-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T15:24:19.280+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T15:24:19.380+05:30  INFO 21856 --- [quantity-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T15:24:19.430+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T15:24:19.740+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T15:24:19.767+05:30  INFO 21856 --- [quantity-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T15:24:19.970+05:30  INFO 21856 --- [quantity-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:quantitydb user=SA
+2026-07-28T15:24:19.972+05:30  INFO 21856 --- [quantity-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T15:24:20.000+05:30  WARN 21856 --- [quantity-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T15:24:20.018+05:30  INFO 21856 --- [quantity-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T15:24:20.824+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T15:24:20.886+05:30  INFO 21856 --- [quantity-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:24:20.934+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-07-28T15:24:21.263+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.e.q.s.QuantityMeasurementServiceImpl   : QuantityMeasurementService initialized.
+2026-07-28T15:24:21.671+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T15:24:21.712+05:30  WARN 21856 --- [quantity-service] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f25a16cc-66ff-4b5d-961a-ba12cc3f29df
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-28T15:24:21.722+05:30  INFO 21856 --- [quantity-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-28T15:24:22.217+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:quantitydb'
+2026-07-28T15:24:23.267+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T15:24:23.354+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-07-28T15:24:24.373+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T15:24:24.390+05:30  INFO 21856 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : Started QuantityServiceApplication in 10.397 seconds (process running for 11.192)
+2026-07-28T15:27:55.221+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28T15:27:55.222+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-28T15:27:55.225+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-07-28T15:27:55.288+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-2] o.e.q.s.FeignAuthenticationFilter        : ========== FeignAuthenticationFilter ==========
+2026-07-28T15:27:55.304+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-2] o.e.q.s.FeignAuthenticationFilter        : Request URI : /api/quantity/add
+2026-07-28T15:27:55.304+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-2] o.e.q.s.FeignAuthenticationFilter        : Authorization Header : Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbnNoaWthYXNpamFAZ21haWwuY29tIiwiaWF0IjoxNzg1MTc5MDA5LCJleHAiOjE3ODUyNjU0MDl9.OBcqzx01dVU7YfyXDGIaHzId30O7cmpYpMayzgkYl9A
+2026-07-28T15:27:55.304+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-2] o.e.q.s.FeignAuthenticationFilter        : Calling OAuth Service for token validation...
+2026-07-28T15:27:55.798+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-2] o.e.q.s.FeignAuthenticationFilter        : Validation Response : org.example.quantityservice.dto.ValidationResponse@2d872ff7
+2026-07-28T15:27:55.798+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-2] o.e.q.s.FeignAuthenticationFilter        : Authentication SUCCESS for : anshikaasija@gmail.com
+2026-07-28T15:27:55.897+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-2] o.e.q.s.QuantityMeasurementServiceImpl   : Performing ADD operation.
+2026-07-28T15:28:01.707+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-4] o.e.q.s.FeignAuthenticationFilter        : ========== FeignAuthenticationFilter ==========
+2026-07-28T15:28:01.720+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-4] o.e.q.s.FeignAuthenticationFilter        : Request URI : /api/quantity/add
+2026-07-28T15:28:01.720+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-4] o.e.q.s.FeignAuthenticationFilter        : Authorization Header : Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbnNoaWthYXNpamFAZ21haWwuY29tIiwiaWF0IjoxNzg1MTc5MDA5LCJleHAiOjE3ODUyNjU0MDl9.OBcqzx01dVU7YfyXDGIaHzId30O7cmpYpMayzgkYl9A
+2026-07-28T15:28:01.720+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-4] o.e.q.s.FeignAuthenticationFilter        : Calling OAuth Service for token validation...
+2026-07-28T15:28:01.736+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-4] o.e.q.s.FeignAuthenticationFilter        : Validation Response : org.example.quantityservice.dto.ValidationResponse@3985172d
+2026-07-28T15:28:01.736+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-4] o.e.q.s.FeignAuthenticationFilter        : Authentication SUCCESS for : anshikaasija@gmail.com
+2026-07-28T15:28:01.740+05:30  INFO 21856 --- [quantity-service] [http-nio-8081-exec-4] o.e.q.s.QuantityMeasurementServiceImpl   : Performing ADD operation.
+2026-07-28T15:28:53.621+05:30  INFO 21856 --- [quantity-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T15:28:53.638+05:30  INFO 21856 --- [quantity-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T15:28:53.648+05:30  INFO 21856 --- [quantity-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:28:53.657+05:30  WARN 21856 --- [quantity-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T15:28:53.658+05:30  INFO 21856 --- [quantity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T15:28:53.662+05:30  INFO 21856 --- [quantity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T15:28:57.254+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : Starting QuantityServiceApplication using Java 21.0.11 with PID 24192 (C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp\quantity-service\target\classes started by anshi in C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp)
+2026-07-28T15:28:57.256+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T15:28:57.335+05:30  INFO 24192 --- [quantity-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T15:28:57.336+05:30  INFO 24192 --- [quantity-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T15:28:59.344+05:30  INFO 24192 --- [quantity-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T15:28:59.433+05:30  INFO 24192 --- [quantity-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 1 JPA repository interface.
+2026-07-28T15:28:59.730+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=77d0b4ad-0db1-3b94-bb60-34787841fd71
+2026-07-28T15:29:00.478+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-07-28T15:29:00.497+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T15:29:00.498+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T15:29:00.598+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T15:29:00.599+05:30  INFO 24192 --- [quantity-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3263 ms
+2026-07-28T15:29:01.587+05:30  WARN 24192 --- [quantity-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T15:29:01.885+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T15:29:01.999+05:30  INFO 24192 --- [quantity-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T15:29:02.080+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T15:29:02.483+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T15:29:02.524+05:30  INFO 24192 --- [quantity-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T15:29:02.704+05:30  INFO 24192 --- [quantity-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:quantitydb user=SA
+2026-07-28T15:29:02.707+05:30  INFO 24192 --- [quantity-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T15:29:02.731+05:30  WARN 24192 --- [quantity-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T15:29:02.749+05:30  INFO 24192 --- [quantity-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T15:29:03.495+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T15:29:03.544+05:30  INFO 24192 --- [quantity-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:29:03.599+05:30  WARN 24192 --- [quantity-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-07-28T15:29:03.828+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.e.q.s.QuantityMeasurementServiceImpl   : QuantityMeasurementService initialized.
+2026-07-28T15:29:04.287+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T15:29:04.350+05:30  WARN 24192 --- [quantity-service] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3c03513d-621b-4272-bf7f-bb5a784f4357
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-28T15:29:04.362+05:30  INFO 24192 --- [quantity-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-28T15:29:04.904+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:quantitydb'
+2026-07-28T15:29:05.964+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T15:29:06.050+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-07-28T15:29:07.071+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T15:29:07.086+05:30  INFO 24192 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : Started QuantityServiceApplication in 11.612 seconds (process running for 12.612)
+2026-07-28T15:38:38.989+05:30  INFO 24192 --- [quantity-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T15:38:39.009+05:30  INFO 24192 --- [quantity-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T15:38:39.018+05:30  INFO 24192 --- [quantity-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:38:39.026+05:30  WARN 24192 --- [quantity-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T15:38:39.027+05:30  INFO 24192 --- [quantity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T15:38:39.032+05:30  INFO 24192 --- [quantity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T15:38:43.356+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : Starting QuantityServiceApplication using Java 21.0.11 with PID 33452 (C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp\quantity-service\target\classes started by anshi in C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp)
+2026-07-28T15:38:43.360+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T15:38:43.417+05:30  INFO 33452 --- [quantity-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T15:38:43.417+05:30  INFO 33452 --- [quantity-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T15:38:45.437+05:30  INFO 33452 --- [quantity-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T15:38:45.583+05:30  INFO 33452 --- [quantity-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 1 JPA repository interface.
+2026-07-28T15:38:46.110+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=77d0b4ad-0db1-3b94-bb60-34787841fd71
+2026-07-28T15:38:47.230+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-07-28T15:38:47.253+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T15:38:47.254+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T15:38:47.341+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T15:38:47.342+05:30  INFO 33452 --- [quantity-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3923 ms
+2026-07-28T15:38:48.045+05:30  WARN 33452 --- [quantity-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T15:38:48.228+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T15:38:48.287+05:30  INFO 33452 --- [quantity-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T15:38:48.327+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T15:38:48.652+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T15:38:48.681+05:30  INFO 33452 --- [quantity-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T15:38:48.823+05:30  INFO 33452 --- [quantity-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:quantitydb user=SA
+2026-07-28T15:38:48.825+05:30  INFO 33452 --- [quantity-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T15:38:48.843+05:30  WARN 33452 --- [quantity-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T15:38:48.860+05:30  INFO 33452 --- [quantity-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T15:38:49.629+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T15:38:49.684+05:30  INFO 33452 --- [quantity-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:38:49.755+05:30  WARN 33452 --- [quantity-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-07-28T15:38:50.071+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.e.q.s.QuantityMeasurementServiceImpl   : QuantityMeasurementService initialized.
+2026-07-28T15:38:50.558+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T15:38:50.608+05:30  WARN 33452 --- [quantity-service] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2333dc94-a7d4-4b42-996b-2d60e885344b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-28T15:38:50.619+05:30  INFO 33452 --- [quantity-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-28T15:38:51.198+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:quantitydb'
+2026-07-28T15:38:52.272+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T15:38:52.354+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-07-28T15:38:53.366+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T15:38:53.379+05:30  INFO 33452 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : Started QuantityServiceApplication in 11.928 seconds (process running for 13.007)
+2026-07-28T15:41:11.164+05:30  INFO 33452 --- [quantity-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T15:41:11.173+05:30  INFO 33452 --- [quantity-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T15:41:11.182+05:30  INFO 33452 --- [quantity-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:41:11.190+05:30  WARN 33452 --- [quantity-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T15:41:11.191+05:30  INFO 33452 --- [quantity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T15:41:11.192+05:30  INFO 33452 --- [quantity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T15:41:15.245+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : Starting QuantityServiceApplication using Java 21.0.11 with PID 34572 (C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp\quantity-service\target\classes started by anshi in C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp)
+2026-07-28T15:41:15.248+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T15:41:15.300+05:30  INFO 34572 --- [quantity-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T15:41:15.300+05:30  INFO 34572 --- [quantity-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T15:41:17.336+05:30  INFO 34572 --- [quantity-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T15:41:17.467+05:30  INFO 34572 --- [quantity-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 1 JPA repository interface.
+2026-07-28T15:41:17.859+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=77d0b4ad-0db1-3b94-bb60-34787841fd71
+2026-07-28T15:41:18.793+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-07-28T15:41:18.824+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T15:41:18.825+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T15:41:18.925+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T15:41:18.926+05:30  INFO 34572 --- [quantity-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3625 ms
+2026-07-28T15:41:19.760+05:30  WARN 34572 --- [quantity-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T15:41:19.984+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T15:41:20.115+05:30  INFO 34572 --- [quantity-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T15:41:20.207+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T15:41:20.853+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T15:41:20.895+05:30  INFO 34572 --- [quantity-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T15:41:21.364+05:30  INFO 34572 --- [quantity-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:quantitydb user=SA
+2026-07-28T15:41:21.367+05:30  INFO 34572 --- [quantity-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T15:41:21.411+05:30  WARN 34572 --- [quantity-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T15:41:21.437+05:30  INFO 34572 --- [quantity-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T15:41:22.648+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T15:41:22.737+05:30  INFO 34572 --- [quantity-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:41:22.831+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-07-28T15:41:23.431+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.e.q.s.QuantityMeasurementServiceImpl   : QuantityMeasurementService initialized.
+2026-07-28T15:41:24.132+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T15:41:24.187+05:30  WARN 34572 --- [quantity-service] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0d5a9218-0466-4fb2-80a3-4c955e388178
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-07-28T15:41:24.204+05:30  INFO 34572 --- [quantity-service] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-07-28T15:41:24.882+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:quantitydb'
+2026-07-28T15:41:25.961+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T15:41:26.073+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-07-28T15:41:27.088+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-07-28T15:41:27.115+05:30  INFO 34572 --- [quantity-service] [restartedMain] o.e.q.QuantityServiceApplication         : Started QuantityServiceApplication in 13.539 seconds (process running for 14.408)
+2026-07-28T15:42:53.291+05:30  INFO 34572 --- [quantity-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T15:42:53.300+05:30  INFO 34572 --- [quantity-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T15:42:53.309+05:30  INFO 34572 --- [quantity-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:42:53.317+05:30  WARN 34572 --- [quantity-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T15:42:53.318+05:30  INFO 34572 --- [quantity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T15:42:53.320+05:30  INFO 34572 --- [quantity-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

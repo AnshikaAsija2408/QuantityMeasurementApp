@@ -1,6 +1,6 @@
 // Direct port of the original js/api.js
-// Backend base URL is UNCHANGED.
-const BASE_URL = "http://localhost:8080/api/quantity";
+// Backend base URL updated to point to the quantity-service microservice (port 8081).
+const BASE_URL = "http://localhost:8081/api/quantity";
 
 async function callAPI(endpoint, data) {
   const token = localStorage.getItem("token");

@@ -1,0 +1,672 @@
+2026-07-28T00:00:03.398+05:30  INFO 28940 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T00:00:03.415+05:30  INFO 28940 --- [oauth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T00:00:03.423+05:30  INFO 28940 --- [oauth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:00:03.432+05:30  WARN 28940 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T00:00:03.434+05:30  INFO 28940 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T00:00:03.435+05:30  INFO 28940 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T00:00:06.856+05:30  INFO 25976 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Starting OAuthServiceApplication using Java 23.0.1 with PID 25976 (C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1)\oauth-service\target\classes started by anshi in C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1))
+2026-07-28T00:00:06.861+05:30  INFO 25976 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T00:00:06.932+05:30  INFO 25976 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T00:00:06.932+05:30  INFO 25976 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T00:00:08.589+05:30  INFO 25976 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T00:00:08.672+05:30  INFO 25976 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interface.
+2026-07-28T00:00:09.568+05:30  INFO 25976 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-28T00:00:09.587+05:30  INFO 25976 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T00:00:09.587+05:30  INFO 25976 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T00:00:09.650+05:30  INFO 25976 --- [oauth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T00:00:09.650+05:30  INFO 25976 --- [oauth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2718 ms
+2026-07-28T00:00:10.099+05:30  INFO 25976 --- [oauth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T00:00:10.163+05:30  INFO 25976 --- [oauth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T00:00:10.213+05:30  INFO 25976 --- [oauth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T00:00:10.498+05:30  INFO 25976 --- [oauth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T00:00:10.532+05:30  INFO 25976 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T00:00:10.657+05:30  INFO 25976 --- [oauth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:authdb user=SA
+2026-07-28T00:00:10.657+05:30  INFO 25976 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T00:00:10.686+05:30  WARN 25976 --- [oauth-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T00:00:10.704+05:30  INFO 25976 --- [oauth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T00:00:11.369+05:30  INFO 25976 --- [oauth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T00:00:11.417+05:30  INFO 25976 --- [oauth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:00:12.006+05:30  WARN 25976 --- [oauth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T00:00:12.346+05:30  INFO 25976 --- [oauth-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T00:00:12.815+05:30  INFO 25976 --- [oauth-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2026-07-28T00:00:12.850+05:30  INFO 25976 --- [oauth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-07-28T00:00:12.919+05:30  INFO 25976 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-28T00:00:12.939+05:30  INFO 25976 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Started OAuthServiceApplication in 6.648 seconds (process running for 7.241)
+2026-07-28T00:00:40.741+05:30  INFO 25976 --- [oauth-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28T00:00:40.741+05:30  INFO 25976 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-28T00:00:40.741+05:30  INFO 25976 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-28T00:02:05.810+05:30  INFO 25976 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T00:02:05.815+05:30  INFO 25976 --- [oauth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T00:02:05.826+05:30  INFO 25976 --- [oauth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:02:05.831+05:30  WARN 25976 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T00:02:05.831+05:30  INFO 25976 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T00:02:05.831+05:30  INFO 25976 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T00:02:07.951+05:30  INFO 1976 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Starting OAuthServiceApplication using Java 23.0.1 with PID 1976 (C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1)\oauth-service\target\classes started by anshi in C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1))
+2026-07-28T00:02:07.952+05:30  INFO 1976 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T00:02:08.025+05:30  INFO 1976 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T00:02:08.025+05:30  INFO 1976 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T00:02:09.564+05:30  INFO 1976 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T00:02:09.615+05:30  INFO 1976 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interface.
+2026-07-28T00:02:10.887+05:30  INFO 1976 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-28T00:02:10.936+05:30  INFO 1976 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T00:02:10.936+05:30  INFO 1976 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T00:02:11.070+05:30  INFO 1976 --- [oauth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T00:02:11.070+05:30  INFO 1976 --- [oauth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3045 ms
+2026-07-28T00:02:11.798+05:30  INFO 1976 --- [oauth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T00:02:11.889+05:30  INFO 1976 --- [oauth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T00:02:11.987+05:30  INFO 1976 --- [oauth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T00:02:12.694+05:30  INFO 1976 --- [oauth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T00:02:12.741+05:30  INFO 1976 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T00:02:12.965+05:30  INFO 1976 --- [oauth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:authdb user=SA
+2026-07-28T00:02:12.965+05:30  INFO 1976 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T00:02:12.994+05:30  WARN 1976 --- [oauth-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T00:02:13.029+05:30  INFO 1976 --- [oauth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T00:02:14.006+05:30  INFO 1976 --- [oauth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T00:02:14.102+05:30  INFO 1976 --- [oauth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:02:15.197+05:30  WARN 1976 --- [oauth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T00:02:15.691+05:30  INFO 1976 --- [oauth-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T00:02:16.615+05:30  INFO 1976 --- [oauth-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2026-07-28T00:02:16.680+05:30  INFO 1976 --- [oauth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-07-28T00:02:16.802+05:30  INFO 1976 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-28T00:02:16.848+05:30  INFO 1976 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Started OAuthServiceApplication in 9.504 seconds (process running for 10.159)
+2026-07-28T00:02:30.263+05:30  INFO 1976 --- [oauth-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28T00:02:30.263+05:30  INFO 1976 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-28T00:02:30.263+05:30  INFO 1976 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-28T00:18:28.440+05:30  INFO 1976 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T00:18:28.453+05:30  INFO 1976 --- [oauth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T00:18:28.465+05:30  INFO 1976 --- [oauth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:18:28.478+05:30  WARN 1976 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T00:18:28.478+05:30  INFO 1976 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T00:18:28.483+05:30  INFO 1976 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T00:18:30.749+05:30  INFO 10244 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Starting OAuthServiceApplication using Java 23.0.1 with PID 10244 (C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1)\oauth-service\target\classes started by anshi in C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1))
+2026-07-28T00:18:30.755+05:30  INFO 10244 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T00:18:30.828+05:30  INFO 10244 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T00:18:30.828+05:30  INFO 10244 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T00:18:32.199+05:30  INFO 10244 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T00:18:32.247+05:30  INFO 10244 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interface.
+2026-07-28T00:18:32.945+05:30  INFO 10244 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-28T00:18:32.961+05:30  INFO 10244 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T00:18:32.961+05:30  INFO 10244 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T00:18:33.023+05:30  INFO 10244 --- [oauth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T00:18:33.023+05:30  INFO 10244 --- [oauth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2190 ms
+2026-07-28T00:18:33.358+05:30  INFO 10244 --- [oauth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T00:18:33.405+05:30  INFO 10244 --- [oauth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T00:18:33.457+05:30  INFO 10244 --- [oauth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T00:18:33.738+05:30  INFO 10244 --- [oauth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T00:18:33.769+05:30  INFO 10244 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T00:18:33.912+05:30  INFO 10244 --- [oauth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:authdb user=SA
+2026-07-28T00:18:33.912+05:30  INFO 10244 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T00:18:33.930+05:30  WARN 10244 --- [oauth-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T00:18:33.944+05:30  INFO 10244 --- [oauth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T00:18:34.564+05:30  INFO 10244 --- [oauth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T00:18:34.612+05:30  INFO 10244 --- [oauth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:18:35.152+05:30  WARN 10244 --- [oauth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T00:18:35.498+05:30  INFO 10244 --- [oauth-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T00:18:36.016+05:30  INFO 10244 --- [oauth-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2026-07-28T00:18:36.053+05:30  INFO 10244 --- [oauth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-07-28T00:18:36.129+05:30  INFO 10244 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-28T00:18:36.131+05:30  INFO 10244 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Started OAuthServiceApplication in 6.023 seconds (process running for 6.561)
+2026-07-28T00:18:47.534+05:30  INFO 10244 --- [oauth-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28T00:18:47.534+05:30  INFO 10244 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-28T00:18:47.534+05:30  INFO 10244 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-28T00:21:29.078+05:30  INFO 10244 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T00:21:29.084+05:30  INFO 10244 --- [oauth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T00:21:29.090+05:30  INFO 10244 --- [oauth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:21:29.097+05:30  WARN 10244 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T00:21:29.097+05:30  INFO 10244 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T00:21:29.097+05:30  INFO 10244 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T00:21:31.050+05:30  INFO 30732 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Starting OAuthServiceApplication using Java 23.0.1 with PID 30732 (C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1)\oauth-service\target\classes started by anshi in C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1))
+2026-07-28T00:21:31.053+05:30  INFO 30732 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T00:21:31.104+05:30  INFO 30732 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T00:21:31.104+05:30  INFO 30732 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T00:21:32.542+05:30  INFO 30732 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T00:21:32.606+05:30  INFO 30732 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interface.
+2026-07-28T00:21:33.381+05:30  INFO 30732 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-28T00:21:33.397+05:30  INFO 30732 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T00:21:33.397+05:30  INFO 30732 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T00:21:33.460+05:30  INFO 30732 --- [oauth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T00:21:33.460+05:30  INFO 30732 --- [oauth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2356 ms
+2026-07-28T00:21:33.851+05:30  INFO 30732 --- [oauth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T00:21:33.898+05:30  INFO 30732 --- [oauth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T00:21:33.930+05:30  INFO 30732 --- [oauth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T00:21:34.212+05:30  INFO 30732 --- [oauth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T00:21:34.246+05:30  INFO 30732 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T00:21:34.383+05:30  INFO 30732 --- [oauth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:authdb user=SA
+2026-07-28T00:21:34.383+05:30  INFO 30732 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T00:21:34.399+05:30  WARN 30732 --- [oauth-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T00:21:34.415+05:30  INFO 30732 --- [oauth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T00:21:35.129+05:30  INFO 30732 --- [oauth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T00:21:35.177+05:30  INFO 30732 --- [oauth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:21:35.795+05:30  WARN 30732 --- [oauth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T00:21:36.227+05:30  INFO 30732 --- [oauth-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T00:21:36.736+05:30  INFO 30732 --- [oauth-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2026-07-28T00:21:36.789+05:30  INFO 30732 --- [oauth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-07-28T00:21:36.861+05:30  INFO 30732 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-28T00:21:36.888+05:30  INFO 30732 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Started OAuthServiceApplication in 6.437 seconds (process running for 7.004)
+2026-07-28T00:21:53.852+05:30  INFO 30732 --- [oauth-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28T00:21:53.854+05:30  INFO 30732 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-28T00:21:53.856+05:30  INFO 30732 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-28T00:29:34.554+05:30  INFO 21352 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Starting OAuthServiceApplication using Java 23.0.1 with PID 21352 (C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1)\oauth-service\target\classes started by anshi in C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1))
+2026-07-28T00:29:34.562+05:30  INFO 21352 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T00:29:34.630+05:30  INFO 21352 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T00:29:34.630+05:30  INFO 21352 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T00:29:36.275+05:30  INFO 21352 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T00:29:36.362+05:30  INFO 21352 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 1 JPA repository interface.
+2026-07-28T00:29:37.543+05:30  INFO 21352 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-28T00:29:37.569+05:30  INFO 21352 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T00:29:37.569+05:30  INFO 21352 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T00:29:37.653+05:30  INFO 21352 --- [oauth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T00:29:37.653+05:30  INFO 21352 --- [oauth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3023 ms
+2026-07-28T00:29:38.235+05:30  INFO 21352 --- [oauth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T00:29:38.307+05:30  INFO 21352 --- [oauth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T00:29:38.367+05:30  INFO 21352 --- [oauth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T00:29:38.877+05:30  INFO 21352 --- [oauth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T00:29:38.914+05:30  INFO 21352 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T00:29:39.155+05:30  INFO 21352 --- [oauth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:authdb user=SA
+2026-07-28T00:29:39.157+05:30  INFO 21352 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T00:29:39.189+05:30  WARN 21352 --- [oauth-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T00:29:39.232+05:30  INFO 21352 --- [oauth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T00:29:40.307+05:30  INFO 21352 --- [oauth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T00:29:40.406+05:30  INFO 21352 --- [oauth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:29:41.385+05:30  WARN 21352 --- [oauth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T00:29:41.891+05:30  INFO 21352 --- [oauth-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T00:29:42.465+05:30  INFO 21352 --- [oauth-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2026-07-28T00:29:42.508+05:30  WARN 21352 --- [oauth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-07-28T00:29:42.559+05:30  WARN 21352 --- [oauth-service] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-07-28T00:29:42.559+05:30  INFO 21352 --- [oauth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:29:42.575+05:30  WARN 21352 --- [oauth-service] [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T00:29:42.575+05:30  INFO 21352 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T00:29:42.577+05:30  INFO 21352 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T00:29:42.590+05:30  INFO 21352 --- [oauth-service] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-28T00:29:42.606+05:30 ERROR 21352 --- [oauth-service] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-07-28T00:29:50.444+05:30  INFO 30732 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T00:29:50.444+05:30  INFO 30732 --- [oauth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T00:29:50.459+05:30  INFO 30732 --- [oauth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:29:50.471+05:30  WARN 30732 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T00:29:50.471+05:30  INFO 30732 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T00:29:50.475+05:30  INFO 30732 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T00:29:56.791+05:30  INFO 22476 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Starting OAuthServiceApplication using Java 23.0.1 with PID 22476 (C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1)\oauth-service\target\classes started by anshi in C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1))
+2026-07-28T00:29:56.799+05:30  INFO 22476 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T00:29:56.857+05:30  INFO 22476 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T00:29:56.857+05:30  INFO 22476 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T00:29:58.249+05:30  INFO 22476 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T00:29:58.307+05:30  INFO 22476 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
+2026-07-28T00:29:59.015+05:30  INFO 22476 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-28T00:29:59.029+05:30  INFO 22476 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T00:29:59.029+05:30  INFO 22476 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T00:29:59.084+05:30  INFO 22476 --- [oauth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T00:29:59.087+05:30  INFO 22476 --- [oauth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2227 ms
+2026-07-28T00:29:59.465+05:30  INFO 22476 --- [oauth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T00:29:59.529+05:30  INFO 22476 --- [oauth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T00:29:59.567+05:30  INFO 22476 --- [oauth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T00:29:59.835+05:30  INFO 22476 --- [oauth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T00:29:59.866+05:30  INFO 22476 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T00:29:59.989+05:30  INFO 22476 --- [oauth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:authdb user=SA
+2026-07-28T00:29:59.989+05:30  INFO 22476 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T00:30:00.020+05:30  WARN 22476 --- [oauth-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T00:30:00.038+05:30  INFO 22476 --- [oauth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T00:30:00.626+05:30  INFO 22476 --- [oauth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T00:30:00.683+05:30  INFO 22476 --- [oauth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:30:01.208+05:30  WARN 22476 --- [oauth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T00:30:01.532+05:30  INFO 22476 --- [oauth-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T00:30:02.007+05:30  INFO 22476 --- [oauth-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2026-07-28T00:30:02.040+05:30  INFO 22476 --- [oauth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-07-28T00:30:02.108+05:30  INFO 22476 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-28T00:30:02.118+05:30  INFO 22476 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Started OAuthServiceApplication in 5.86 seconds (process running for 6.389)
+2026-07-28T00:30:42.379+05:30  INFO 22476 --- [oauth-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28T00:30:42.391+05:30  INFO 22476 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-28T00:30:42.391+05:30  INFO 22476 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-28T00:32:50.137+05:30  INFO 22476 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T00:32:50.142+05:30  INFO 22476 --- [oauth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T00:32:50.147+05:30  INFO 22476 --- [oauth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:32:50.155+05:30  WARN 22476 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T00:32:50.155+05:30  INFO 22476 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T00:32:50.157+05:30  INFO 22476 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T00:32:52.583+05:30  INFO 13632 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Starting OAuthServiceApplication using Java 23.0.1 with PID 13632 (C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1)\oauth-service\target\classes started by anshi in C:\Users\anshi\Downloads\QuantityMeasurementApp-Microservices (1))
+2026-07-28T00:32:52.583+05:30  INFO 13632 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T00:32:52.657+05:30  INFO 13632 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T00:32:52.657+05:30  INFO 13632 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T00:32:54.160+05:30  INFO 13632 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T00:32:54.207+05:30  INFO 13632 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 1 JPA repository interface.
+2026-07-28T00:32:55.434+05:30  INFO 13632 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-28T00:32:55.451+05:30  INFO 13632 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T00:32:55.451+05:30  INFO 13632 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T00:32:55.548+05:30  INFO 13632 --- [oauth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T00:32:55.549+05:30  INFO 13632 --- [oauth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2882 ms
+2026-07-28T00:32:56.232+05:30  INFO 13632 --- [oauth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T00:32:56.312+05:30  INFO 13632 --- [oauth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T00:32:56.369+05:30  INFO 13632 --- [oauth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T00:32:57.141+05:30  INFO 13632 --- [oauth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T00:32:57.225+05:30  INFO 13632 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T00:32:57.535+05:30  INFO 13632 --- [oauth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:authdb user=SA
+2026-07-28T00:32:57.535+05:30  INFO 13632 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T00:32:57.584+05:30  WARN 13632 --- [oauth-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T00:32:57.606+05:30  INFO 13632 --- [oauth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T00:32:58.585+05:30  INFO 13632 --- [oauth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T00:32:58.663+05:30  INFO 13632 --- [oauth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T00:32:59.495+05:30  WARN 13632 --- [oauth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T00:32:59.972+05:30  INFO 13632 --- [oauth-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T00:33:00.767+05:30  INFO 13632 --- [oauth-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2026-07-28T00:33:00.820+05:30  INFO 13632 --- [oauth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-07-28T00:33:00.933+05:30  INFO 13632 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-28T00:33:00.952+05:30  INFO 13632 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Started OAuthServiceApplication in 8.949 seconds (process running for 9.523)
+2026-07-28T00:33:18.821+05:30  INFO 13632 --- [oauth-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28T00:33:18.821+05:30  INFO 13632 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-28T00:33:18.824+05:30  INFO 13632 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-07-28T00:33:29.119+05:30  INFO 13632 --- [oauth-service] [http-nio-8080-exec-2] o.e.oauthservice.service.UserService     : Creating new Google OAuth user: anshikaasija@gmail.com
+2026-07-28T09:26:51.522+05:30  WARN 13632 --- [oauth-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7h41m43s399ms702µs200ns).
+2026-07-28T09:47:16.214+05:30  WARN 13632 --- [oauth-service] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m24s331ms895µs).
+2026-07-28T09:48:43.494+05:30  INFO 13632 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T09:48:43.514+05:30  INFO 13632 --- [oauth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T09:48:43.540+05:30  INFO 13632 --- [oauth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T09:48:43.570+05:30  WARN 13632 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T09:48:43.572+05:30  INFO 13632 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T09:48:43.578+05:30  INFO 13632 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T15:24:28.531+05:30  INFO 19780 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Starting OAuthServiceApplication using Java 21.0.11 with PID 19780 (C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp\oauth-service\target\classes started by anshi in C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp)
+2026-07-28T15:24:28.532+05:30  INFO 19780 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T15:24:28.578+05:30  INFO 19780 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T15:24:28.578+05:30  INFO 19780 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T15:24:29.935+05:30  INFO 19780 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T15:24:29.990+05:30  INFO 19780 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
+2026-07-28T15:24:30.728+05:30  INFO 19780 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-28T15:24:30.744+05:30  INFO 19780 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T15:24:30.744+05:30  INFO 19780 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T15:24:30.800+05:30  INFO 19780 --- [oauth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T15:24:30.800+05:30  INFO 19780 --- [oauth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2221 ms
+2026-07-28T15:24:31.144+05:30  INFO 19780 --- [oauth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T15:24:31.193+05:30  INFO 19780 --- [oauth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T15:24:31.225+05:30  INFO 19780 --- [oauth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T15:24:31.482+05:30  INFO 19780 --- [oauth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T15:24:31.509+05:30  INFO 19780 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T15:24:31.648+05:30  INFO 19780 --- [oauth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:authdb user=SA
+2026-07-28T15:24:31.650+05:30  INFO 19780 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T15:24:31.667+05:30  WARN 19780 --- [oauth-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T15:24:31.683+05:30  INFO 19780 --- [oauth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T15:24:32.323+05:30  INFO 19780 --- [oauth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T15:24:32.368+05:30  INFO 19780 --- [oauth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:24:32.920+05:30  WARN 19780 --- [oauth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T15:24:33.272+05:30  INFO 19780 --- [oauth-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T15:24:33.759+05:30  INFO 19780 --- [oauth-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2026-07-28T15:24:33.794+05:30  WARN 19780 --- [oauth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-07-28T15:24:33.871+05:30  INFO 19780 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-28T15:24:33.887+05:30  INFO 19780 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Started OAuthServiceApplication in 5.899 seconds (process running for 6.388)
+2026-07-28T15:27:55.387+05:30  INFO 19780 --- [oauth-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28T15:27:55.387+05:30  INFO 19780 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-28T15:27:55.389+05:30  INFO 19780 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-07-28T15:28:49.352+05:30  INFO 19780 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T15:28:49.359+05:30  INFO 19780 --- [oauth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T15:28:49.367+05:30  INFO 19780 --- [oauth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:28:49.373+05:30  WARN 19780 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T15:28:49.375+05:30  INFO 19780 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T15:28:49.377+05:30  INFO 19780 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T15:28:52.513+05:30  INFO 4208 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Starting OAuthServiceApplication using Java 21.0.11 with PID 4208 (C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp\oauth-service\target\classes started by anshi in C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp)
+2026-07-28T15:28:52.517+05:30  INFO 4208 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T15:28:52.611+05:30  INFO 4208 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T15:28:52.611+05:30  INFO 4208 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T15:28:55.028+05:30  INFO 4208 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T15:28:55.154+05:30  INFO 4208 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 1 JPA repository interface.
+2026-07-28T15:28:56.529+05:30  INFO 4208 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-28T15:28:56.553+05:30  INFO 4208 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T15:28:56.554+05:30  INFO 4208 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T15:28:56.650+05:30  INFO 4208 --- [oauth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T15:28:56.657+05:30  INFO 4208 --- [oauth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4045 ms
+2026-07-28T15:28:57.832+05:30  INFO 4208 --- [oauth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T15:28:58.162+05:30  INFO 4208 --- [oauth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T15:28:58.423+05:30  INFO 4208 --- [oauth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T15:28:58.841+05:30  INFO 4208 --- [oauth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T15:28:58.880+05:30  INFO 4208 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T15:28:59.143+05:30  INFO 4208 --- [oauth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:authdb user=SA
+2026-07-28T15:28:59.145+05:30  INFO 4208 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T15:28:59.183+05:30  WARN 4208 --- [oauth-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T15:28:59.212+05:30  INFO 4208 --- [oauth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T15:29:00.398+05:30  INFO 4208 --- [oauth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T15:29:00.485+05:30  INFO 4208 --- [oauth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:29:01.798+05:30  WARN 4208 --- [oauth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T15:29:02.398+05:30  INFO 4208 --- [oauth-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T15:29:02.930+05:30  INFO 4208 --- [oauth-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2026-07-28T15:29:02.968+05:30  INFO 4208 --- [oauth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-07-28T15:29:03.036+05:30  INFO 4208 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-28T15:29:03.052+05:30  INFO 4208 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Started OAuthServiceApplication in 11.295 seconds (process running for 11.942)
+2026-07-28T15:29:22.466+05:30  INFO 4208 --- [oauth-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28T15:29:22.466+05:30  INFO 4208 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-28T15:29:22.468+05:30  INFO 4208 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-07-28T15:33:22.471+05:30  INFO 4208 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T15:33:22.481+05:30  INFO 4208 --- [oauth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T15:33:22.489+05:30  INFO 4208 --- [oauth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:33:22.498+05:30  WARN 4208 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T15:33:22.500+05:30  INFO 4208 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T15:33:22.502+05:30  INFO 4208 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T15:33:25.237+05:30  INFO 1740 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Starting OAuthServiceApplication using Java 21.0.11 with PID 1740 (C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp\oauth-service\target\classes started by anshi in C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp)
+2026-07-28T15:33:25.241+05:30  INFO 1740 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T15:33:25.307+05:30  INFO 1740 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T15:33:25.308+05:30  INFO 1740 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T15:33:27.082+05:30  INFO 1740 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T15:33:27.142+05:30  INFO 1740 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
+2026-07-28T15:33:28.078+05:30  INFO 1740 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-28T15:33:28.096+05:30  INFO 1740 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T15:33:28.097+05:30  INFO 1740 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T15:33:28.165+05:30  INFO 1740 --- [oauth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T15:33:28.165+05:30  INFO 1740 --- [oauth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2857 ms
+2026-07-28T15:33:28.771+05:30  INFO 1740 --- [oauth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T15:33:28.902+05:30  INFO 1740 --- [oauth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T15:33:28.977+05:30  INFO 1740 --- [oauth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T15:33:29.543+05:30  INFO 1740 --- [oauth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T15:33:29.610+05:30  INFO 1740 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T15:33:29.908+05:30  INFO 1740 --- [oauth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:authdb user=SA
+2026-07-28T15:33:29.911+05:30  INFO 1740 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T15:33:29.953+05:30  WARN 1740 --- [oauth-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T15:33:29.973+05:30  INFO 1740 --- [oauth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T15:33:31.349+05:30  INFO 1740 --- [oauth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T15:33:31.462+05:30  INFO 1740 --- [oauth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:33:32.375+05:30  WARN 1740 --- [oauth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T15:33:32.917+05:30  INFO 1740 --- [oauth-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T15:33:33.900+05:30  INFO 1740 --- [oauth-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2026-07-28T15:33:33.941+05:30  INFO 1740 --- [oauth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-07-28T15:33:34.065+05:30  INFO 1740 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-28T15:33:34.098+05:30  INFO 1740 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Started OAuthServiceApplication in 9.549 seconds (process running for 10.238)
+2026-07-28T15:38:35.158+05:30  INFO 1740 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T15:38:35.168+05:30  INFO 1740 --- [oauth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T15:38:35.176+05:30  INFO 1740 --- [oauth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:38:35.182+05:30  WARN 1740 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T15:38:35.184+05:30  INFO 1740 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T15:38:35.187+05:30  INFO 1740 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T15:38:37.619+05:30  INFO 1508 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Starting OAuthServiceApplication using Java 21.0.11 with PID 1508 (C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp\oauth-service\target\classes started by anshi in C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp)
+2026-07-28T15:38:37.622+05:30  INFO 1508 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T15:38:37.693+05:30  INFO 1508 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T15:38:37.694+05:30  INFO 1508 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T15:38:39.795+05:30  INFO 1508 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T15:38:39.921+05:30  INFO 1508 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 1 JPA repository interface.
+2026-07-28T15:38:41.496+05:30  INFO 1508 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-28T15:38:41.522+05:30  INFO 1508 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T15:38:41.523+05:30  INFO 1508 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T15:38:41.661+05:30  INFO 1508 --- [oauth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T15:38:41.661+05:30  INFO 1508 --- [oauth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3964 ms
+2026-07-28T15:38:42.335+05:30  INFO 1508 --- [oauth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T15:38:42.421+05:30  INFO 1508 --- [oauth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T15:38:42.477+05:30  INFO 1508 --- [oauth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T15:38:42.910+05:30  INFO 1508 --- [oauth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T15:38:42.958+05:30  INFO 1508 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T15:38:43.249+05:30  INFO 1508 --- [oauth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:authdb user=SA
+2026-07-28T15:38:43.252+05:30  INFO 1508 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T15:38:43.285+05:30  WARN 1508 --- [oauth-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T15:38:43.319+05:30  INFO 1508 --- [oauth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T15:38:44.454+05:30  INFO 1508 --- [oauth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T15:38:44.521+05:30  INFO 1508 --- [oauth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:38:45.555+05:30  WARN 1508 --- [oauth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T15:38:46.476+05:30  INFO 1508 --- [oauth-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T15:38:47.731+05:30  INFO 1508 --- [oauth-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2026-07-28T15:38:47.793+05:30  INFO 1508 --- [oauth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-07-28T15:38:47.961+05:30  INFO 1508 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-28T15:38:48.018+05:30  INFO 1508 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Started OAuthServiceApplication in 11.091 seconds (process running for 11.751)
+2026-07-28T15:39:14.659+05:30  INFO 1508 --- [oauth-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28T15:39:14.659+05:30  INFO 1508 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-28T15:39:14.661+05:30  INFO 1508 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-07-28T15:41:15.192+05:30  INFO 1508 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T15:41:15.206+05:30  INFO 1508 --- [oauth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T15:41:15.213+05:30  INFO 1508 --- [oauth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:41:15.221+05:30  WARN 1508 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T15:41:15.222+05:30  INFO 1508 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T15:41:15.225+05:30  INFO 1508 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T15:41:18.670+05:30  INFO 29860 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Starting OAuthServiceApplication using Java 21.0.11 with PID 29860 (C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp\oauth-service\target\classes started by anshi in C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp)
+2026-07-28T15:41:18.673+05:30  INFO 29860 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T15:41:18.773+05:30  INFO 29860 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T15:41:18.774+05:30  INFO 29860 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T15:41:21.531+05:30  INFO 29860 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T15:41:21.625+05:30  INFO 29860 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 1 JPA repository interface.
+2026-07-28T15:41:22.590+05:30  INFO 29860 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-28T15:41:22.616+05:30  INFO 29860 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T15:41:22.617+05:30  INFO 29860 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T15:41:22.698+05:30  INFO 29860 --- [oauth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T15:41:22.699+05:30  INFO 29860 --- [oauth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3923 ms
+2026-07-28T15:41:23.962+05:30  INFO 29860 --- [oauth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T15:41:24.162+05:30  INFO 29860 --- [oauth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T15:41:24.253+05:30  INFO 29860 --- [oauth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T15:41:24.758+05:30  INFO 29860 --- [oauth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T15:41:24.816+05:30  INFO 29860 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T15:41:25.025+05:30  INFO 29860 --- [oauth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:authdb user=SA
+2026-07-28T15:41:25.026+05:30  INFO 29860 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T15:41:25.047+05:30  WARN 29860 --- [oauth-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T15:41:25.066+05:30  INFO 29860 --- [oauth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T15:41:25.712+05:30  INFO 29860 --- [oauth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T15:41:25.757+05:30  INFO 29860 --- [oauth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:41:26.398+05:30  WARN 29860 --- [oauth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T15:41:26.744+05:30  INFO 29860 --- [oauth-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T15:41:27.360+05:30  INFO 29860 --- [oauth-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2026-07-28T15:41:27.404+05:30  WARN 29860 --- [oauth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-07-28T15:41:27.485+05:30  INFO 29860 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-28T15:41:27.502+05:30  INFO 29860 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Started OAuthServiceApplication in 9.846 seconds (process running for 10.642)
+2026-07-28T15:41:39.097+05:30  INFO 29860 --- [oauth-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28T15:41:39.098+05:30  INFO 29860 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-28T15:41:39.100+05:30  INFO 29860 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-07-28T15:42:58.098+05:30  INFO 29860 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T15:42:58.117+05:30  INFO 29860 --- [oauth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T15:42:58.126+05:30  INFO 29860 --- [oauth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:42:58.134+05:30  WARN 29860 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T15:42:58.136+05:30  INFO 29860 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T15:42:58.138+05:30  INFO 29860 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T15:43:01.796+05:30  INFO 21056 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Starting OAuthServiceApplication using Java 21.0.11 with PID 21056 (C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp\oauth-service\target\classes started by anshi in C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp)
+2026-07-28T15:43:01.800+05:30  INFO 21056 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T15:43:01.947+05:30  INFO 21056 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T15:43:01.952+05:30  INFO 21056 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T15:43:04.435+05:30  INFO 21056 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T15:43:04.526+05:30  INFO 21056 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 1 JPA repository interface.
+2026-07-28T15:43:06.238+05:30  INFO 21056 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-28T15:43:06.265+05:30  INFO 21056 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T15:43:06.267+05:30  INFO 21056 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T15:43:06.343+05:30  INFO 21056 --- [oauth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T15:43:06.346+05:30  INFO 21056 --- [oauth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4392 ms
+2026-07-28T15:43:06.739+05:30  INFO 21056 --- [oauth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T15:43:06.785+05:30  INFO 21056 --- [oauth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T15:43:06.817+05:30  INFO 21056 --- [oauth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T15:43:07.079+05:30  INFO 21056 --- [oauth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T15:43:07.104+05:30  INFO 21056 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T15:43:07.249+05:30  INFO 21056 --- [oauth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:authdb user=SA
+2026-07-28T15:43:07.251+05:30  INFO 21056 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T15:43:07.272+05:30  WARN 21056 --- [oauth-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T15:43:07.302+05:30  INFO 21056 --- [oauth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T15:43:07.930+05:30  INFO 21056 --- [oauth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T15:43:07.977+05:30  INFO 21056 --- [oauth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:43:08.643+05:30  WARN 21056 --- [oauth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T15:43:09.051+05:30  INFO 21056 --- [oauth-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T15:43:09.614+05:30  INFO 21056 --- [oauth-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2026-07-28T15:43:09.650+05:30  WARN 21056 --- [oauth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-07-28T15:43:09.722+05:30  INFO 21056 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-28T15:43:09.736+05:30  INFO 21056 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Started OAuthServiceApplication in 8.817 seconds (process running for 9.679)
+2026-07-28T15:43:17.875+05:30  INFO 21056 --- [oauth-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28T15:43:17.876+05:30  INFO 21056 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-28T15:43:17.879+05:30  INFO 21056 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-07-28T15:47:10.252+05:30  INFO 21056 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T15:47:10.259+05:30  INFO 21056 --- [oauth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T15:47:10.265+05:30  INFO 21056 --- [oauth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:47:10.273+05:30  WARN 21056 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T15:47:10.274+05:30  INFO 21056 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T15:47:10.278+05:30  INFO 21056 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T15:47:12.533+05:30  INFO 3360 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Starting OAuthServiceApplication using Java 21.0.11 with PID 3360 (C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp\oauth-service\target\classes started by anshi in C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp)
+2026-07-28T15:47:12.536+05:30  INFO 3360 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T15:47:12.594+05:30  INFO 3360 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T15:47:12.595+05:30  INFO 3360 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T15:47:14.320+05:30  INFO 3360 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T15:47:14.389+05:30  INFO 3360 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
+2026-07-28T15:47:15.237+05:30  INFO 3360 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-28T15:47:15.257+05:30  INFO 3360 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T15:47:15.258+05:30  INFO 3360 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T15:47:15.325+05:30  INFO 3360 --- [oauth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T15:47:15.326+05:30  INFO 3360 --- [oauth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2731 ms
+2026-07-28T15:47:15.779+05:30  INFO 3360 --- [oauth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T15:47:15.844+05:30  INFO 3360 --- [oauth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T15:47:15.880+05:30  INFO 3360 --- [oauth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T15:47:16.192+05:30  INFO 3360 --- [oauth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T15:47:16.222+05:30  INFO 3360 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T15:47:16.364+05:30  INFO 3360 --- [oauth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:authdb user=SA
+2026-07-28T15:47:16.366+05:30  INFO 3360 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T15:47:16.391+05:30  WARN 3360 --- [oauth-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T15:47:16.416+05:30  INFO 3360 --- [oauth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T15:47:17.125+05:30  INFO 3360 --- [oauth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T15:47:17.176+05:30  INFO 3360 --- [oauth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:47:17.854+05:30  WARN 3360 --- [oauth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T15:47:18.277+05:30  INFO 3360 --- [oauth-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T15:47:18.850+05:30  INFO 3360 --- [oauth-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2026-07-28T15:47:18.884+05:30  WARN 3360 --- [oauth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-07-28T15:47:18.958+05:30  INFO 3360 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-28T15:47:18.976+05:30  INFO 3360 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Started OAuthServiceApplication in 7.032 seconds (process running for 7.636)
+2026-07-28T15:47:31.188+05:30  INFO 3360 --- [oauth-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28T15:47:31.188+05:30  INFO 3360 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-28T15:47:31.188+05:30  INFO 3360 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-28T15:48:40.587+05:30  INFO 3360 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-28T15:48:40.594+05:30  INFO 3360 --- [oauth-service] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-28T15:48:40.599+05:30  INFO 3360 --- [oauth-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:48:40.605+05:30  WARN 3360 --- [oauth-service] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-232]
+2026-07-28T15:48:40.605+05:30  INFO 3360 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-28T15:48:40.607+05:30  INFO 3360 --- [oauth-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-07-28T15:48:43.200+05:30  INFO 20628 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Starting OAuthServiceApplication using Java 21.0.11 with PID 20628 (C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp\oauth-service\target\classes started by anshi in C:\Users\anshi\OneDrive\Desktop\QuantityMeasurementApp)
+2026-07-28T15:48:43.203+05:30  INFO 20628 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-07-28T15:48:43.262+05:30  INFO 20628 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-28T15:48:43.263+05:30  INFO 20628 --- [oauth-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-28T15:48:45.027+05:30  INFO 20628 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-28T15:48:45.080+05:30  INFO 20628 --- [oauth-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
+2026-07-28T15:48:45.985+05:30  INFO 20628 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-28T15:48:46.001+05:30  INFO 20628 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-28T15:48:46.001+05:30  INFO 20628 --- [oauth-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-07-28T15:48:46.062+05:30  INFO 20628 --- [oauth-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-28T15:48:46.063+05:30  INFO 20628 --- [oauth-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2799 ms
+2026-07-28T15:48:46.632+05:30  INFO 20628 --- [oauth-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-28T15:48:46.687+05:30  INFO 20628 --- [oauth-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-07-28T15:48:46.723+05:30  INFO 20628 --- [oauth-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-28T15:48:47.068+05:30  INFO 20628 --- [oauth-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-28T15:48:47.098+05:30  INFO 20628 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-28T15:48:47.235+05:30  INFO 20628 --- [oauth-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:authdb user=SA
+2026-07-28T15:48:47.237+05:30  INFO 20628 --- [oauth-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-28T15:48:47.260+05:30  WARN 20628 --- [oauth-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-07-28T15:48:47.278+05:30  INFO 20628 --- [oauth-service] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-28T15:48:48.075+05:30  INFO 20628 --- [oauth-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-28T15:48:48.133+05:30  INFO 20628 --- [oauth-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-28T15:48:48.825+05:30  WARN 20628 --- [oauth-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-28T15:48:49.240+05:30  INFO 20628 --- [oauth-service] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-07-28T15:48:49.910+05:30  INFO 20628 --- [oauth-service] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:authdb'
+2026-07-28T15:48:49.969+05:30  WARN 20628 --- [oauth-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-07-28T15:48:50.099+05:30  INFO 20628 --- [oauth-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-28T15:48:50.121+05:30  INFO 20628 --- [oauth-service] [restartedMain] o.e.o.OAuthServiceApplication            : Started OAuthServiceApplication in 7.515 seconds (process running for 8.092)
+2026-07-28T15:48:54.993+05:30  INFO 20628 --- [oauth-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-28T15:48:54.993+05:30  INFO 20628 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-28T15:48:54.993+05:30  INFO 20628 --- [oauth-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-07-28T15:49:13.527+05:30  INFO 20628 --- [oauth-service] [http-nio-8080-exec-10] o.e.oauthservice.service.UserService     : Creating new Google OAuth user: anshikaasija@gmail.com

@@ -1,5 +1,6 @@
 import React from "react";
 import Clock from "./Clock.jsx";
+import UserProfile from "./UserProfile.jsx";
 import { logout } from "../services/authService.js";
 
 export default function Header() {
@@ -15,6 +16,8 @@ export default function Header() {
       </div>
 
       <div className="header-right">
+        <UserProfile />
+
         <div className="clock-frame">
           <Clock />
         </div>
